@@ -9584,8 +9584,8 @@ a.button {
 .view-with-bg{
   background-image: url('../img/experience-it.png') !important;
   background-size: cover !important;
-  width: 480px;
-  height: 750px;
+  width: 400px;
+  height: 600px;
 }
 
 @-webkit-keyframes scaleOut {
