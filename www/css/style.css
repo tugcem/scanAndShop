@@ -7608,7 +7608,7 @@ textarea {
   padding: 7px 10px 7px 0px;
   max-width: 200px;
   width: 35%;
-  color: #444;
+  color: #E9070A;
   font-size: 16px; }
 
 .placeholder-icon {
@@ -9584,10 +9584,24 @@ a.button {
 .view-with-bg{
   background: url('../img/experience-it.png') no-repeat;
   background-size: cover;
-  /*width: 400px;*/
-  /*height: 600px;*/
 }
 
+
+#profile-image {
+  display: block;
+  border-radius: 100px;
+  border: 1px solid #fff;
+  width: 128px;
+  height: 128px;
+  background-color: #fff;
+  margin-top: 3%;
+  margin-left: 3%;
+}
+
+.block-inline {
+    display: inline-block;
+    vertical-align:top;
+}
 @-webkit-keyframes scaleOut {
   from {
     -webkit-transform: scale(1);

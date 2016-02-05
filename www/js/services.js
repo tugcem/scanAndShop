@@ -47,4 +47,80 @@ angular.module('starter.services', [])
       return null;
     }
   };
+})
+.factory('FileService', function() {
+  var images;
+  var IMAGE_STORAGE_KEY = 'images';
+
+  return {
+    storeImage: function(img) {
+      images.push(img);
+      window.localStorage.setItem(IMAGE_STORAGE_KEY, JSON.stringify(images));
+    },
+    images: function() {
+      var img = window.localStorage.getItem(IMAGE_STORAGE_KEY);
+      if (img) {
+        images = JSON.parse(img);
+      } else {
+        images = [];
+      }
+      return images;
+    }
+  }
+})
+.factory('ImageService', function(FileService, $q) {
+
+  function makeid() {
+    var text = '';
+    var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+    for (var i = 0; i < 5; i++) {
+      text += possible.charAt(Math.floor(Math.random() * possible.length));
+    }
+    return text;
+  };
+
+  function optionsForType(type) {
+    var source;
+    switch (type) {
+      case 0:
+        source = Camera.PictureSourceType.CAMERA;
+        break;
+      case 1:
+        source = Camera.PictureSourceType.PHOTOLIBRARY;
+        break;
+    }
+    return {
+      destinationType: Camera.DestinationType.FILE_URI,
+      sourceType: source,
+      allowEdit: false,
+      encodingType: Camera.EncodingType.JPEG,
+      popoverOptions: CameraPopoverOptions,
+      saveToPhotoAlbum: false
+    };
+  }
+
+  function saveMedia(type) {
+    return $q(function(resolve, reject) {
+      var options = optionsForType(type);
+
+      navigator.camera.getPicture(function(imageUrl) {
+        var name = imageUrl.substr(imageUrl.lastIndexOf('/') + 1);
+        var namePath = imageUrl.substr(0, imageUrl.lastIndexOf('/') + 1);
+        var newName = makeid() + name;
+        cordova.copyFile(namePath, name, cordova.file.dataDirectory, newName)
+          .then(function(info) {
+            FileService.storeImage(newName);
+            resolve();
+          }, function(e) {
+            reject();
+          });
+      }, function(error) {
+        console.log(error);
+      },options);
+    })
+  }
+  return {
+    handleMediaDialog: saveMedia
+  }
 });
