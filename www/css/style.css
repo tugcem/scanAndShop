@@ -9582,10 +9582,10 @@ a.button {
 
 
 .view-with-bg{
-  background-image: url('../img/experience-it.png') !important;
-  background-size: cover !important;
-  width: 400px;
-  height: 600px;
+  background: url('../img/experience-it.png') no-repeat;
+  background-size: cover;
+  /*width: 400px;*/
+  /*height: 600px;*/
 }
 
 @-webkit-keyframes scaleOut {
