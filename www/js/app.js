@@ -85,4 +85,5 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 })
 .config(function($ionicConfigProvider) {
     $ionicConfigProvider.tabs.position('bottom');
+    $ionicConfigProvider.navBar.alignTitle('center');
 });
