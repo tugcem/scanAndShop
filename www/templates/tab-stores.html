@@ -1,0 +1,37 @@
+<ion-view view-title="">
+  <ion-nav-buttons>
+    <div class="bar bar-header">
+      <div class="title">
+        <input id="toggle-on" class="toggle toggle-left" name="toggle" type="radio" ng-click="changeView(true)" checked="{{view}}">
+        <label for="toggle-on" id="toggle-on" class="btn toggle">List</label>
+        <input id="toggle-off" class="toggle toggle-right" name="toggle" ng-click="changeView(false)" type="radio" checked="{{!view}}">
+        <label for="toggle-off" id="toggle-off" class="btn toggle">Map</label>
+      </div>
+    </div>
+  </ion-nav-buttons>
+  <ion-content>
+    <ion-list ng-show="view">
+      <ion-item class="item-remove-animate item-avatar item-icon-right row" ng-repeat="store in stores" type="item-text-wrap" style="padding: %1;">
+        <div class="col-25">
+          <img ng-src="{{store.image}}" style="width: 60px; height: 60px;">
+        </div>
+        <div class="col-50">
+          <p>{{store.storeLocation}}</p>
+          <p>{{store.address}}</p>
+          <p>{{store.tel}}</p>
+        </div>
+        <div class="col-25">
+          <p>{{store.distance}} km</p>
+        </div>
+      </ion-item>
+    </ion-list>
+    <div ng-hide="view">
+      <body ng-controller="MapCtrl">
+        <div id="map" data-tap-disabled="true"></div>
+        <!-- <ion-footer-bar class="bar-dark">
+          <a ng-click="centerOnMe()" class="button button-icon icon ion-navigate">Find Me</a>
+        </ion-footer-bar> -->
+      </body>
+    </div>
+  </ion-content>
+</ion-view>

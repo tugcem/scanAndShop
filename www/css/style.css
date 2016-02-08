@@ -3929,7 +3929,7 @@ a.subdued {
     border-color: #b2b2b2;
     background-color: #f8f8f8;
     background-image: linear-gradient(0deg, #b2b2b2, #b2b2b2 50%, transparent 50%);
-    color: #444; }
+    color: #E9070A; }
     .bar.bar-stable .title {
       color: #E9070A; }
     .bar.bar-stable.bar-footer {
@@ -9602,6 +9602,39 @@ a.button {
     display: inline-block;
     vertical-align:top;
 }
+
+input[type="radio"].toggle {
+    display: none;
+    color: #E9070A;
+}
+
+input[type="radio"].toggle:checked + label {
+    color: white;
+    border-color: transparent;
+    background-color: #E9070A;
+}
+
+input[type="radio"].toggle + label {
+    width: 3em;
+}
+
+.toggle {
+  padding: 0% 18%;
+  border-style: solid;
+  border-color: #E9070A;
+  border-width: 1px;
+}
+
+#toggle-on {
+  border-radius: 5px 0px 0px 5px;
+}
+
+#toggle-off {
+  border-radius: 0px 5px 5px 0px;
+}
+
+
+
 @-webkit-keyframes scaleOut {
   from {
     -webkit-transform: scale(1);

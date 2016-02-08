@@ -1,126 +1,56 @@
 angular.module('starter.services', [])
 
-.factory('Chats', function() {
-  // Might use a resource here that returns a JSON array
-
+.factory('Stores', function() {
   // Some fake testing data
-  var chats = [{
+  var stores = [{
     id: 0,
-    name: 'Ben Sparrow',
-    lastText: 'You on your way?',
-    face: 'img/ben.png'
+    storeLocation: 'Conestoga Mail',
+    address: '550 King St N, Waterloo, ON N2L 5W6',
+    tel: '(519) 888-6485',
+    image: 'https://upload.wikimedia.org/wikipedia/en/thumb/0/0f/Roots_logo.svg/1280px-Roots_logo.svg.png',
+    distance: '0.5'
+
   }, {
     id: 1,
-    name: 'Max Lynx',
-    lastText: 'Hey, it\'s me',
-    face: 'img/max.png'
+    storeLocation: '17600 Yonge Street',
+    address: 'Newmarket Toronto, ON L3Y 4ZI',
+    tel: '(519) 895-0625',
+    image: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRK4zbAd5ugIZExV9jm7owT4mYJBGyQi_HhJPX4LkvZ7pw_vVkch2X386Ft',
+    distance: '0.9'
   }, {
     id: 2,
-    name: 'Adam Bradleyson',
-    lastText: 'I should buy a boat',
-    face: 'img/adam.jpg'
+    storeLocation: '550 King St. N, Unit H16',
+    address: 'Waterloo, ON N2L 5W6',
+    tel: '(519) 772-0341',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0t93Epyz4ya50mRGFKfdhxBMcXQgmHNeUZvn2fc1Dgjqca7Pq30br-A96',
+    distance: '1.3'
   }, {
     id: 3,
-    name: 'Perry Governor',
-    lastText: 'Look at my mukluks!',
-    face: 'img/perry.png'
+    storeLocation: '1400 Ottawa St. S',
+    address: 'Kitchener, ON N2E 4E2',
+    tel: '(519) 568-7463',
+    image: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQphNuvomd7qyps-RCSvy_QxTxO707LL91OtrShrxbzjFeYfnIWCHCJYgOIlA',
+    distance: '1.9'
   }, {
     id: 4,
-    name: 'Mike Harrington',
-    lastText: 'This is wicked good ice cream.',
-    face: 'img/mike.png'
+    storeLocation: '550 King Street North',
+    address: 'Waterloo, ON N2L 5W6',
+    tel: '(519) 884-6990',
+    image: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT3SmFNmG0EpmrHRBpfbiuvHJfElu0fn12AlS86JcB4ZH3aTx--Mc7PSDQ',
+    distance: '2.2'
   }];
 
   return {
     all: function() {
-      return chats;
+      return stores;
     },
-    remove: function(chat) {
-      chats.splice(chats.indexOf(chat), 1);
-    },
-    get: function(chatId) {
-      for (var i = 0; i < chats.length; i++) {
-        if (chats[i].id === parseInt(chatId)) {
-          return chats[i];
+    get: function(storeId) {
+      for (var i = 0; i < stores.length; i++) {
+        if (stores[i].id === parseInt(storeId)) {
+          return stores[i];
         }
       }
       return null;
     }
   };
-})
-.factory('FileService', function() {
-  var images;
-  var IMAGE_STORAGE_KEY = 'images';
-
-  return {
-    storeImage: function(img) {
-      images.push(img);
-      window.localStorage.setItem(IMAGE_STORAGE_KEY, JSON.stringify(images));
-    },
-    images: function() {
-      var img = window.localStorage.getItem(IMAGE_STORAGE_KEY);
-      if (img) {
-        images = JSON.parse(img);
-      } else {
-        images = [];
-      }
-      return images;
-    }
-  }
-})
-.factory('ImageService', function(FileService, $q) {
-
-  function makeid() {
-    var text = '';
-    var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-
-    for (var i = 0; i < 5; i++) {
-      text += possible.charAt(Math.floor(Math.random() * possible.length));
-    }
-    return text;
-  };
-
-  function optionsForType(type) {
-    var source;
-    switch (type) {
-      case 0:
-        source = Camera.PictureSourceType.CAMERA;
-        break;
-      case 1:
-        source = Camera.PictureSourceType.PHOTOLIBRARY;
-        break;
-    }
-    return {
-      destinationType: Camera.DestinationType.FILE_URI,
-      sourceType: source,
-      allowEdit: false,
-      encodingType: Camera.EncodingType.JPEG,
-      popoverOptions: CameraPopoverOptions,
-      saveToPhotoAlbum: false
-    };
-  }
-
-  function saveMedia(type) {
-    return $q(function(resolve, reject) {
-      var options = optionsForType(type);
-
-      navigator.camera.getPicture(function(imageUrl) {
-        var name = imageUrl.substr(imageUrl.lastIndexOf('/') + 1);
-        var namePath = imageUrl.substr(0, imageUrl.lastIndexOf('/') + 1);
-        var newName = makeid() + name;
-        cordova.copyFile(namePath, name, cordova.file.dataDirectory, newName)
-          .then(function(info) {
-            FileService.storeImage(newName);
-            resolve();
-          }, function(e) {
-            reject();
-          });
-      }, function(error) {
-        console.log(error);
-      },options);
-    })
-  }
-  return {
-    handleMediaDialog: saveMedia
-  }
 });
