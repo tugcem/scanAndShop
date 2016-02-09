@@ -2,9 +2,9 @@
   <ion-nav-buttons>
     <div class="bar bar-header">
       <div class="title">
-        <input id="toggle-on" class="toggle toggle-left" name="toggle" type="radio" ng-click="changeView(true)" checked="{{view}}">
+        <input id="toggle-on" class="toggle toggle-left" name="toggle" type="radio" ng-click="changeView(true)" checked>
         <label for="toggle-on" id="toggle-on" class="btn toggle">List</label>
-        <input id="toggle-off" class="toggle toggle-right" name="toggle" ng-click="changeView(false)" type="radio" checked="{{!view}}">
+        <input id="toggle-off" class="toggle toggle-right" name="toggle" ng-click="changeView(false)" type="radio">
         <label for="toggle-off" id="toggle-off" class="btn toggle">Map</label>
       </div>
     </div>
@@ -26,12 +26,14 @@
       </ion-item>
     </ion-list>
     <div ng-hide="view">
-      <body ng-controller="MapCtrl">
-        <div id="map" data-tap-disabled="true"></div>
-        <!-- <ion-footer-bar class="bar-dark">
-          <a ng-click="centerOnMe()" class="button button-icon icon ion-navigate">Find Me</a>
-        </ion-footer-bar> -->
-      </body>
+      <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+        <ui-gmap-markers models="markers" coords="'location'" click="showInfo"></ui-gmap-markers>
+
+        <ui-gmap-window coords="infoBusiness.location" show="infoVisible" closeClick="hideInfo()"
+                        options="windowOptions">
+        </ui-gmap-window>
+
+      </ui-gmap-google-map>
     </div>
   </ion-content>
 </ion-view>

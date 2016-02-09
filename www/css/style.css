@@ -9633,6 +9633,7 @@ input[type="radio"].toggle + label {
   border-radius: 0px 5px 5px 0px;
 }
 
+.angular-google-map-container { height: 400px; }
 
 
 @-webkit-keyframes scaleOut {

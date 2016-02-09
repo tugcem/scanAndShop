@@ -53,4 +53,20 @@ angular.module('starter.services', [])
       return null;
     }
   };
+})
+.factory('Yelp', function($http, $q) {
+  return {
+    search: function(position) {
+      return $http({
+        method: "get",
+        url: 'https://angular-google-maps-example.herokuapp.com/api/v1/yelp/search',
+        params: {
+          limit: 10,
+          radius_filter: 500,
+          sort: 1,
+          ll: [position.coords.latitude, position.coords.longitude].join()
+        }
+      });
+    }
+  };
 });
