@@ -1,17 +1,11 @@
 angular.module('starter.services', [])
 
 .factory('Stores', function($http) {
-  var stores = [];
-
-  $http.get('stores.json').success(function(data) {
-    // you can do some processing here
-    console.log(data);
-    stores.push(data[0]);
-  });
+  var stores;
 
   return {
     all: function() {
-      return stores;
+      return $http({method: 'GET', url: '/stores.json'});
     },
     get: function(storeId) {
       for (var i = 0; i < stores.length; i++) {

@@ -8,7 +8,13 @@ angular.module('starter.controllers', ['uiGmapgoogle-maps'])
 
 .controller('StoresCtrl', function($scope, Stores, $timeout, uiGmapGoogleMapApi, Yelp) {
   $scope.view = true;
-  $scope.stores = Stores.all();
+  console.log(Stores.all());
+
+  Stores.all().then(function(data) {
+    $scope.stores = data.data.stores;
+  }, function(err) {
+    console.log(err);
+  });
 
   $scope.changeView = function (value) {
     $scope.view = value;
@@ -61,7 +67,6 @@ angular.module('starter.controllers', ['uiGmapgoogle-maps'])
     };
 
     Yelp.search(position).then(function(data) {
-      console.log(data);
       for (var i = 0; i < 10; i++) {
         var business = data.data.businesses[i];
         $scope.markers.push({
@@ -76,7 +81,6 @@ angular.module('starter.controllers', ['uiGmapgoogle-maps'])
       }
     }, function(error) {
       console.log("Unable to access yelp");
-      console.log(error);
     });
   };
 
