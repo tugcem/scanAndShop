@@ -110,10 +110,15 @@ angular.module('starter.controllers', ['uiGmapgoogle-maps'])
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
   $scope.chat = Chats.get($stateParams.chatId);
 })
+.controller('ScanShopListCtrl', function($scope, $stateParams, ScanShopList) {
+  $scope.view = true;
+  $scope.list = ScanShopList.waiting();
 
-.controller('AccountCtrl', function($scope, $stateParams) {
+  $scope.changeView = function (value) {
+    $scope.view = value;
+    $scope.list = value ? ScanShopList.waiting() : ScanShopList.closed();
+  };
 })
-
 .controller('ProfileCtrl', function($scope, $ionicActionSheet) {
   $scope.imgURI = "http://placehold.it/120x120";
 

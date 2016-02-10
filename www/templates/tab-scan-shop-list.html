@@ -1,0 +1,36 @@
+<ion-view view-title="">
+  <ion-nav-buttons>
+    <button class="button button-icon icon ion-ios-plus-outline active" ng-click="readBarcode()">
+    </button>
+    <div class="bar bar-header">
+      <div class="title">
+        <input id="toggle-on" class="toggle toggle-left" name="toggle" type="radio" ng-click="changeView(true)" checked>
+        <label for="toggle-on" id="toggle-on" class="btn toggle">Waiting</label>
+        <input id="toggle-off" class="toggle toggle-right" name="toggle" ng-click="changeView(false)" type="radio">
+        <label for="toggle-off" id="toggle-off" class="btn toggle">Closed</label>
+      </div>
+    </div>
+  </ion-nav-buttons>
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right row" ng-repeat="item in list" type="item-text-wrap" style="padding: %1;">
+        <div class="col-20">
+          <img ng-src="{{item.image}}" style="width: 60px; height: 60px;">
+        </div>
+        <div class="col-60">
+          <p>{{item.store.name}}</p>
+          <p>{{item.description}}</p>
+          <p>{{item.uid}}</p>
+        </div>
+        <div class="col-20" style="margin-left: 5%;">
+          <p>{{item.price}} C$</p>
+          <div class="row">
+            <div class="col-40"></div>
+            <div class="ion-ios-pricetags col-60" style="color: {{item.status.color}};"></div>
+          </div>
+          <p>{{item.expectedPrice}} C$</p>
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
