@@ -71,9 +71,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   })
 
   .state('tab.product-detail', {
-    url: '/stores/product-detail',
+    url: '/scan-shop-list/product-detail',
     views: {
-      'tab-stores': {
+      'tab-scan-shop-list': {
         templateUrl: 'templates/product-detail.html',
         controller: 'ProductDetailCtrl'
       }
