@@ -11,8 +11,7 @@
   </ion-nav-buttons>
   <ion-content>
     <ion-list ng-show="view">
-      <ion-item class="item-remove-animate item-avatar item-icon-right row" ng-repeat="store in stores" type="item-text-wrap" style="padding: %1;">
-        <input type="radio" name="radAnswer"/>
+      <ion-item class="item-remove-animate item-avatar item-icon-right row" ng-repeat="store in stores" ng-click="select($index)" ng-class="{sel: $index == selected}" type="item-text-wrap" style="padding: %1;">
         <div class="col-25">
           <img ng-src="{{store.brand_logo_url}}" style="width: 60px; height: 60px;">
         </div>

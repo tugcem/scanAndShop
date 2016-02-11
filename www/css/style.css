@@ -9685,8 +9685,13 @@ input[type="radio"].toggle + label {
   padding-right: 13%;
   padding-left: 13%;
 }
+
 input {
   height: 16px;
+}
+
+.sel {
+  background-color: #DDD;
 }
 
 @-webkit-keyframes scaleOut {

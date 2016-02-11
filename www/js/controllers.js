@@ -30,15 +30,22 @@ angular.module('starter.controllers', ['uiGmapgoogle-maps'])
 
 .controller('StoresCtrl', function($scope, Stores, $timeout, uiGmapGoogleMapApi, Yelp) {
   $scope.view = true;
+  $scope.notView = true;
   $scope.stores = Stores.all();
   // Stores.all().then(function(data) {
   //   $scope.stores = data.data.STORES.STORE;
   // }, function(err) {
   //   console.log(err);
   // });
+  $scope.selected = 0;
+
+  $scope.select= function(index) {
+     $scope.selected = index;
+  };
 
   $scope.changeView = function (value) {
     $scope.view = value;
+    $scope.notView = !value;
   };
 
   $scope.markers = [];
@@ -123,13 +130,13 @@ angular.module('starter.controllers', ['uiGmapgoogle-maps'])
       initializeMap();
     }
   }, 5000);
-  With the new view caching in Ionic, Controllers are only called
-  when they are recreated or on app start, instead of every page change.
-  To listen for when this page is active (for example, to refresh data),
-  listen for the $ionicView.enter event:
+  // With the new view caching in Ionic, Controllers are only called
+  // when they are recreated or on app start, instead of every page change.
+  // To listen for when this page is active (for example, to refresh data),
+  // listen for the $ionicView.enter event:
 
-  $scope.$on('$ionicView.enter', function(e) {
-  });
+  // $scope.$on('$ionicView.enter', function(e) {
+  // });
 })
 .controller('ProductDetailCtrl', function($scope, $stateParams, $state) {
   $scope.goToList = function() {
