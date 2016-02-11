@@ -11,7 +11,8 @@
   </ion-nav-buttons>
   <ion-content>
     <ion-list ng-show="view">
-      <ion-item class="item-remove-animate item-avatar item-icon-right row" ng-repeat="store in stores" type="item-text-wrap" style="padding: %1;">
+
+      <ion-item class="item-remove-animate item-avatar item-icon-right row" ng-repeat="store in stores" ng-class="{'ion-ios-checkmark-outline': selected, '': !selected}" ng-click="selected=!selected" type="item-text-wrap" style="padding: %1;">
         <div class="col-25">
           <img ng-src="{{store.image}}" style="width: 60px; height: 60px;">
         </div>

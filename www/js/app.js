@@ -32,7 +32,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   $stateProvider
 
   // setup an abstract state for the tabs directive
-    .state('tab', {
+  .state('tab', {
     url: '/tab',
     abstract: true,
     templateUrl: 'templates/tabs.html'
@@ -51,23 +51,14 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   })
 
   .state('tab.stores', {
-      url: '/stores',
-      views: {
-        'tab-stores': {
-          templateUrl: 'templates/tab-stores.html',
-          controller: 'StoresCtrl'
-        }
+    url: '/stores',
+    views: {
+      'tab-stores': {
+        templateUrl: 'templates/tab-stores.html',
+        controller: 'StoresCtrl'
       }
-    })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
-        }
-      }
-    })
+    }
+  })
 
   .state('tab.scan-shop-list', {
     url: '/scan-shop-list',
@@ -75,6 +66,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       'tab-scan-shop-list': {
         templateUrl: 'templates/tab-scan-shop-list.html',
         controller: 'ScanShopListCtrl'
+      }
+    }
+  })
+
+  .state('tab.product-detail', {
+    url: '/stores/product-detail',
+    views: {
+      'tab-stores': {
+        templateUrl: 'templates/product-detail.html',
+        controller: 'ProductDetailCtrl'
       }
     }
   })

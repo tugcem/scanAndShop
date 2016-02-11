@@ -7508,7 +7508,8 @@ textarea {
   align-items: center;
   position: relative;
   overflow: hidden;
-  padding: 6px 0 5px 16px; }
+  padding: 0px 0 0px 10px;
+}
   .item-input input {
     -webkit-border-radius: 0;
     border-radius: 0;
@@ -7607,9 +7608,9 @@ textarea {
   display: table;
   padding: 7px 10px 7px 0px;
   max-width: 200px;
-  width: 35%;
+  width: initial;
   color: #E9070A;
-  font-size: 16px; }
+  font-size: 14px; }
 
 .placeholder-icon {
   color: #aaa; }
@@ -9635,6 +9636,44 @@ input[type="radio"].toggle + label {
 
 .angular-google-map-container { height: 400px; }
 
+.smaller {
+  font-size: 11px;
+}
+
+.smaller-18 {
+  font-size: 18px !important;
+}
+
+.fixed-color {
+  color: #E9070A;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.mt-5 {
+  margin-top: 5%;
+}
+
+.request-button {
+  border: none;
+  padding: 0% 10% 0% 10%;
+  border-radius: 30px;
+  border-style: solid;
+  border-color: #E9070A;
+  border-width: 2px;
+}
+
+.request-button:hover {
+  color: #E9070A;;
+  border-color: #E9070A;
+}
+
+input {
+  height: 16px;
+}
 
 @-webkit-keyframes scaleOut {
   from {
