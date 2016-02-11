@@ -7509,6 +7509,7 @@ textarea {
   position: relative;
   overflow: hidden;
   padding: 0px 0 0px 10px;
+  border-radius: 30px;
 }
   .item-input input {
     -webkit-border-radius: 0;
@@ -7606,9 +7607,10 @@ textarea {
 
 .input-label {
   display: table;
-  padding: 7px 10px 7px 0px;
+  padding: 0px 0px 0px 2px;
   max-width: 200px;
   width: initial;
+  margin-left: 10%;
   color: #E9070A;
   font-size: 14px; }
 
@@ -9624,14 +9626,15 @@ input[type="radio"].toggle + label {
   border-style: solid;
   border-color: #E9070A;
   border-width: 1px;
+  margin-right: 1px;
 }
 
 #toggle-on {
-  border-radius: 5px 0px 0px 5px;
+  border-radius: 8px 0px 0px 8px;
 }
 
 #toggle-off {
-  border-radius: 0px 5px 5px 0px;
+  border-radius: 0px 8px 8px 0px;
 }
 
 .angular-google-map-container { height: 400px; }
@@ -9658,7 +9661,6 @@ input[type="radio"].toggle + label {
 }
 
 .request-button {
-  border: none;
   padding: 0% 10% 0% 10%;
   border-radius: 30px;
   border-style: solid;
@@ -9671,6 +9673,18 @@ input[type="radio"].toggle + label {
   border-color: #E9070A;
 }
 
+.switch-label {
+  padding-right: 10%;
+  padding-left: 10%;
+  border-style: solid;
+  border-color: #E9070A;
+  border-width: 1px;
+  margin-right: -5px;
+}
+.switch-pad {
+  padding-right: 13%;
+  padding-left: 13%;
+}
 input {
   height: 16px;
 }

@@ -2,24 +2,25 @@
   <ion-nav-buttons>
     <div class="bar bar-header">
       <div class="title">
-        <input id="toggle-on" class="toggle toggle-left" name="toggle" type="radio" ng-click="changeView(true)" checked>
-        <label for="toggle-on" id="toggle-on" class="btn toggle">List</label>
-        <input id="toggle-off" class="toggle toggle-right" name="toggle" ng-click="changeView(false)" type="radio">
-        <label for="toggle-off" id="toggle-off" class="btn toggle">Map</label>
+        <input id="toggle-on" class="toggle toggle-left" name="toggle" type="radio" ng-click="changeView(true)" ng-checked="view">
+        <label for="toggle-on" id="toggle-on" class="switch-label switch-pad">List</label>
+        <input id="toggle-off" class="toggle toggle-right" name="toggle" ng-click="changeView(false)" type="radio"  ng-checked="notView">
+        <label for="toggle-off" id="toggle-off" class="switch-label switch-pad">Map</label>
       </div>
     </div>
   </ion-nav-buttons>
   <ion-content>
     <ion-list ng-show="view">
-
-      <ion-item class="item-remove-animate item-avatar item-icon-right row" ng-repeat="store in stores" ng-class="{'ion-ios-checkmark-outline': selected, '': !selected}" ng-click="selected=!selected" type="item-text-wrap" style="padding: %1;">
+      <ion-item class="item-remove-animate item-avatar item-icon-right row" ng-repeat="store in stores" type="item-text-wrap" style="padding: %1;">
+        <input type="radio" name="radAnswer"/>
         <div class="col-25">
-          <img ng-src="{{store.image}}" style="width: 60px; height: 60px;">
+          <img ng-src="{{store.brand_logo_url}}" style="width: 60px; height: 60px;">
         </div>
         <div class="col-50">
-          <p>{{store.storeLocation}}</p>
-          <p>{{store.address}}</p>
-          <p>{{store.tel}}</p>
+          <div>{{store.address.street}}</div>
+          <div>{{store.address.unitno}}</div>
+          <div>{{store.address.city}}, {{store.address.state}} {{store.address.post_code}}</div>
+          <div>Tel: {{store.phone}}</div>
         </div>
         <div class="col-25">
           <div class="row">

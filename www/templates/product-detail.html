@@ -47,22 +47,23 @@
           </label>
         </div>
         <div class="col-10 fixed-color"> or</div>
-        <div class="col-40">
+        <div class="col-50">
           <span class="input-label"> Preffered Discount</span>
           <label class="item item-input">
             <input type="number">
           </label>
         </div>
       </div>
-      <div class="col-40">
+      <div class="col-40 mt-5">
         <span class="input-label"> Expiry date</span>
-        <label class="item item-input">
+        <label class="item item-input" style="width: 162px;
+">
           <input type="date">
         </label>
       </div>
       <div class="row mt-5">
         <div class="col text-center">
-          <button ng-click="showForm=!showForm" class="button button-icon toggle text-center request-button fixed-color"> Submit request </button>
+          <button ng-click="saveRequest()" class="button button-icon toggle text-center request-button fixed-color"> Submit request </button>
         </div>
       </div>
     </div>

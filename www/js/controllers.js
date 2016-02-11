@@ -30,12 +30,12 @@ angular.module('starter.controllers', ['uiGmapgoogle-maps'])
 
 .controller('StoresCtrl', function($scope, Stores, $timeout, uiGmapGoogleMapApi, Yelp) {
   $scope.view = true;
-
-  Stores.all().then(function(data) {
-    $scope.stores = data.data.stores;
-  }, function(err) {
-    console.log(err);
-  });
+  $scope.stores = Stores.all();
+  // Stores.all().then(function(data) {
+  //   $scope.stores = data.data.STORES.STORE;
+  // }, function(err) {
+  //   console.log(err);
+  // });
 
   $scope.changeView = function (value) {
     $scope.view = value;
@@ -123,13 +123,13 @@ angular.module('starter.controllers', ['uiGmapgoogle-maps'])
       initializeMap();
     }
   }, 5000);
-  // With the new view caching in Ionic, Controllers are only called
-  // when they are recreated or on app start, instead of every page change.
-  // To listen for when this page is active (for example, to refresh data),
-  // listen for the $ionicView.enter event:
-  //
-  //$scope.$on('$ionicView.enter', function(e) {
-  //});
+  With the new view caching in Ionic, Controllers are only called
+  when they are recreated or on app start, instead of every page change.
+  To listen for when this page is active (for example, to refresh data),
+  listen for the $ionicView.enter event:
+
+  $scope.$on('$ionicView.enter', function(e) {
+  });
 })
 .controller('ProductDetailCtrl', function($scope, $stateParams, $state) {
   $scope.goToList = function() {
@@ -150,10 +150,12 @@ angular.module('starter.controllers', ['uiGmapgoogle-maps'])
 })
 .controller('ScanShopListCtrl', function($scope, $stateParams, ScanShopList) {
   $scope.view = true;
+  $scope.notView = true;
   $scope.list = ScanShopList.waiting();
 
   $scope.changeView = function (value) {
     $scope.view = value;
+    $scope.notView = !value;
     $scope.list = value ? ScanShopList.waiting() : ScanShopList.closed();
   };
 
@@ -183,9 +185,16 @@ angular.module('starter.controllers', ['uiGmapgoogle-maps'])
     }, false);
   };
 })
-.controller('ProfileCtrl', function($scope, $ionicActionSheet) {
+.controller('ProfileCtrl', function($scope, $ionicActionSheet, Customer, $state) {
   $scope.imgURI = "http://placehold.it/120x120";
+  $scope.user = Customer.get();
+  $scope.birthday = {
+    value: new Date(1974, 02, 14)
+  };
 
+  $scope.saveRequest = function () {
+    $state.go('tab.scan-shop-list');
+  };
   $scope.addMedia = function () {
     $scope.hideSheet = $ionicActionSheet.show({
       buttons: [

@@ -1,21 +1,568 @@
 angular.module('starter.services', [])
 
 .factory('Stores', function($http) {
-  var stores;
+  var stores = {
+    "STORES": {
+        "STORE": [
+            {
+                "@store_code": "ROOTS_CA_01",
+                "retailer_code": "ROOTS_CA",
+                "retailer_name": "Roots",
+                "brand_logo_url": "http://demandware.edgesuite.net/aacg_prd/on/demandware.static/Sites-RootsCA-Site/-/default/dw6a14487d/images/header/Roots_logo_updated.png",
+                "brand_tag_url": "https://www.roots.com/on/demandware.static/Sites-RootsCA-Site/-/en_CA/images/stoLocR.png",
+                "store_name": "Roots Kids",
+                "address": {
+                    "street": "89 Bloor Street West",
+                    "unitno": null,
+                    "city": "Toronto",
+                    "post_code": "M5S 1M1",
+                    "state": "ON"
+                },
+                "phone": "4169258900",
+                "longitude": "-79.39047029999999",
+                "latitude": "43.6692857",
+                "distance": "1.5"
+            },
+            {
+                "@store_code": "ROOTS_CA_02",
+                "retailer_code": "ROOTS_CA",
+                "retailer_name": "Roots",
+                "brand_logo_url": "http://demandware.edgesuite.net/aacg_prd/on/demandware.static/Sites-RootsCA-Site/-/default/dw6a14487d/images/header/Roots_logo_updated.png",
+                "brand_tag_url": "https://www.roots.com/on/demandware.static/Sites-RootsCA-Site/-/en_CA/images/stoLocR.png",
+                "store_name": "Rosedale",
+                "address": {
+                    "street": "1073 Yonge Street",
+                    "unitno": null,
+                    "city": "Toronto",
+                    "post_code": "M4W 2L2",
+                    "state": "ON"
+                },
+                "phone": "4169271989",
+                "longitude": "-79.3899764",
+                "latitude": "43.67887959999999",
+                "distance": "1.5"
+            },
+            {
+                "@store_code": "ROOTS_CA_03",
+                "retailer_code": "ROOTS_CA",
+                "retailer_name": "Roots",
+                "brand_logo_url": "http://demandware.edgesuite.net/aacg_prd/on/demandware.static/Sites-RootsCA-Site/-/default/dw6a14487d/images/header/Roots_logo_updated.png",
+                "brand_tag_url": "https://www.roots.com/on/demandware.static/Sites-RootsCA-Site/-/en_CA/images/stoLocR.png",
+                "store_name": "St. Clair",
+                "address": {
+                    "street": "1485 Yonge Street",
+                    "unitno": null,
+                    "city": "Toronto",
+                    "post_code": "M4T 1Z2",
+                    "state": "ON"
+                },
+                "phone": "4169674499",
+                "longitude": "-79.3941979",
+                "latitude": "43.6888259",
+                "distance": "1.5"
+            },
+            {
+                "@store_code": "ROOTS_CA_04",
+                "retailer_code": "ROOTS_CA",
+                "retailer_name": "Roots",
+                "brand_logo_url": "http://demandware.edgesuite.net/aacg_prd/on/demandware.static/Sites-RootsCA-Site/-/default/dw6a14487d/images/header/Roots_logo_updated.png",
+                "brand_tag_url": "https://www.roots.com/on/demandware.static/Sites-RootsCA-Site/-/en_CA/images/stoLocR.png",
+                "store_name": "Roots Central",
+                "address": {
+                    "street": "220 Yonge Street",
+                    "unitno": "C32 Level3",
+                    "city": "Toronto",
+                    "post_code": "M5B 2H1",
+                    "state": "ON"
+                },
+                "phone": "4165939640",
+                "longitude": "-79.3800603",
+                "latitude": "43.6536106",
+                "distance": "1.5"
+            },
+            {
+                "@store_code": "ROOTS_CA_05",
+                "retailer_code": "ROOTS_CA",
+                "retailer_name": "Roots",
+                "brand_logo_url": "http://demandware.edgesuite.net/aacg_prd/on/demandware.static/Sites-RootsCA-Site/-/default/dw6a14487d/images/header/Roots_logo_updated.png",
+                "brand_tag_url": "https://www.roots.com/on/demandware.static/Sites-RootsCA-Site/-/en_CA/images/stoLocR.png",
+                "store_name": "Bloor Street",
+                "address": {
+                    "street": "80 Bloor Street West",
+                    "unitno": null,
+                    "city": "Toronto",
+                    "post_code": "M5S 2V1",
+                    "state": "ON"
+                },
+                "phone": "4163233289",
+                "longitude": "-79.39017679999999",
+                "latitude": "43.6698634",
+                "distance": "1.5"
+            },
+            {
+                "@store_code": "ROOTS_CA_06",
+                "retailer_code": "ROOTS_CA",
+                "retailer_name": "Roots",
+                "brand_logo_url": "http://demandware.edgesuite.net/aacg_prd/on/demandware.static/Sites-RootsCA-Site/-/default/dw6a14487d/images/header/Roots_logo_updated.png",
+                "brand_tag_url": "https://www.roots.com/on/demandware.static/Sites-RootsCA-Site/-/en_CA/images/stoLocR.png",
+                "store_name": "Brookfield Place",
+                "address": {
+                    "street": "181 Bay Street",
+                    "unitno": "S-112",
+                    "city": "Toronto",
+                    "post_code": "M5J 2T3",
+                    "state": "ON"
+                },
+                "phone": "4163640582",
+                "longitude": "-79.3787906",
+                "latitude": "43.6471458",
+                "distance": "1.5"
+            },
+            {
+                "@store_code": "ROOTS_CA_07",
+                "retailer_code": "ROOTS_CA",
+                "retailer_name": "Roots",
+                "brand_logo_url": "http://demandware.edgesuite.net/aacg_prd/on/demandware.static/Sites-RootsCA-Site/-/default/dw6a14487d/images/header/Roots_logo_updated.png",
+                "brand_tag_url": "https://www.roots.com/on/demandware.static/Sites-RootsCA-Site/-/en_CA/images/stoLocR.png",
+                "store_name": "Home Store",
+                "address": {
+                    "street": "1400 Castlefield Ave",
+                    "unitno": null,
+                    "city": "Toronto",
+                    "post_code": "M6B 4C4",
+                    "state": "ON"
+                },
+                "phone": "4167813574",
+                "longitude": "-79.4648845",
+                "latitude": "43.6986554",
+                "distance": "1.5"
+            },
+            {
+                "@store_code": "ROOTS_CA_08",
+                "retailer_code": "ROOTS_CA",
+                "retailer_name": "Roots",
+                "brand_logo_url": "http://demandware.edgesuite.net/aacg_prd/on/demandware.static/Sites-RootsCA-Site/-/default/dw6a14487d/images/header/Roots_logo_updated.png",
+                "brand_tag_url": "https://www.roots.com/on/demandware.static/Sites-RootsCA-Site/-/en_CA/images/stoLocR.png",
+                "store_name": "Orfus Road - Factory Outlet",
+                "address": {
+                    "street": "120 Orfus Rd",
+                    "unitno": null,
+                    "city": "Toronto",
+                    "post_code": "M6A 1L9",
+                    "state": "ON"
+                },
+                "phone": "4167818729",
+                "longitude": "-79.46687849999999",
+                "latitude": "43.7180267",
+                "distance": "1.5"
+            },
+            {
+                "@store_code": "ROOTS_CA_09",
+                "retailer_code": "ROOTS_CA",
+                "retailer_name": "Roots",
+                "brand_logo_url": "http://demandware.edgesuite.net/aacg_prd/on/demandware.static/Sites-RootsCA-Site/-/default/dw6a14487d/images/header/Roots_logo_updated.png",
+                "brand_tag_url": "https://www.roots.com/on/demandware.static/Sites-RootsCA-Site/-/en_CA/images/stoLocR.png",
+                "store_name": "Yorkdale",
+                "address": {
+                    "street": "3401 Dufferin Street",
+                    "unitno": "117",
+                    "city": "Toronto",
+                    "post_code": "M6A 2T9",
+                    "state": "ON"
+                },
+                "phone": "4167833371",
+                "longitude": "-79.4547427",
+                "latitude": "43.7248438",
+                "distance": "1.5"
+            },
+            {
+                "@store_code": "ROOTS_CA_10",
+                "retailer_code": "ROOTS_CA",
+                "retailer_name": "Roots",
+                "brand_logo_url": "http://demandware.edgesuite.net/aacg_prd/on/demandware.static/Sites-RootsCA-Site/-/default/dw6a14487d/images/header/Roots_logo_updated.png",
+                "brand_tag_url": "https://www.roots.com/on/demandware.static/Sites-RootsCA-Site/-/en_CA/images/stoLocR.png",
+                "store_name": "Stockyards",
+                "address": {
+                    "street": "45 Gunns Rd",
+                    "unitno": "101",
+                    "city": "Toronto",
+                    "post_code": "M6N 0A3",
+                    "state": "ON"
+                },
+                "phone": "4166041707",
+                "longitude": "-79.4720055",
+                "latitude": "43.6728418",
+                "distance": "1.5"
+            },
+            {
+                "@store_code": "EDDIEBAUER_CA_01",
+                "retailer_code": "EDDIEBAUER_CA",
+                "retailer_name": "Eddie Bauer",
+                "brand_logo_url": "http://photos.prnewswire.com/prn/20141223/166032LOGO",
+                "brand_tag_url": "http://www.eddiebauer.com/static/img/pin_graphic.gif",
+                "store_name": "Toronto Eaton Centre",
+                "address": {
+                    "street": "220 Yonge Street",
+                    "unitno": "A046B",
+                    "city": "Toronto",
+                    "post_code": "M5B 2H6",
+                    "state": "ON"
+                },
+                "phone": "4166420638",
+                "longitude": "-79.379605",
+                "latitude": "43.653289",
+                "distance": "1.5"
+            },
+            {
+                "@store_code": "EDDIEBAUER_CA_02",
+                "retailer_code": "EDDIEBAUER_CA",
+                "retailer_name": "Eddie Bauer",
+                "brand_logo_url": "http://photos.prnewswire.com/prn/20141223/166032LOGO",
+                "brand_tag_url": "http://www.eddiebauer.com/static/img/pin_graphic.gif",
+                "store_name": "Shops at Don Mills",
+                "address": {
+                    "street": "32 Karl Fraser Road",
+                    "unitno": "CRU J10",
+                    "city": "North York",
+                    "post_code": "M3C 0E8",
+                    "state": "ON"
+                },
+                "phone": "4166402291",
+                "longitude": "-79.344775",
+                "latitude": "43.733814",
+                "distance": "1.5"
+            },
+            {
+                "@store_code": "EDDIEBAUER_CA_03",
+                "retailer_code": "EDDIEBAUER_CA",
+                "retailer_name": "Eddie Bauer",
+                "brand_logo_url": "http://photos.prnewswire.com/prn/20141223/166032LOGO",
+                "brand_tag_url": "http://www.eddiebauer.com/static/img/pin_graphic.gif",
+                "store_name": "Sherway Gardens",
+                "address": {
+                    "street": "25 The West Mall",
+                    "unitno": "78",
+                    "city": "Etobicoke",
+                    "post_code": "M9C 1B8",
+                    "state": "ON"
+                },
+                "phone": "4166229531",
+                "longitude": "-79.561445",
+                "latitude": "43.610471",
+                "distance": "1.5"
+            },
+            {
+                "@store_code": "EDDIEBAUER_CA_04",
+                "retailer_code": "EDDIEBAUER_CA",
+                "retailer_name": "Eddie Bauer",
+                "brand_logo_url": "http://photos.prnewswire.com/prn/20141223/166032LOGO",
+                "brand_tag_url": "http://www.eddiebauer.com/static/img/pin_graphic.gif",
+                "store_name": "Fairview Mall",
+                "address": {
+                    "street": "1800 Sheppard Ave. East",
+                    "unitno": "1012",
+                    "city": "Willowdale",
+                    "post_code": "M2J 5A7",
+                    "state": "ON"
+                },
+                "phone": "4164909444",
+                "longitude": "-79.345215",
+                "latitude": "43.775492",
+                "distance": "1.5"
+            },
+            {
+                "@store_code": "EDDIEBAUER_CA_05",
+                "retailer_code": "EDDIEBAUER_CA",
+                "retailer_name": "Eddie Bauer",
+                "brand_logo_url": "http://photos.prnewswire.com/prn/20141223/166032LOGO",
+                "brand_tag_url": "http://www.eddiebauer.com/static/img/pin_graphic.gif",
+                "store_name": "Square One Centre",
+                "address": {
+                    "street": "100 City Centre Dr",
+                    "unitno": null,
+                    "city": "Mississauga",
+                    "post_code": "L5B 2C9",
+                    "state": "ON"
+                },
+                "phone": "9053660086",
+                "longitude": "-79.641458",
+                "latitude": "43.59024",
+                "distance": "1.5"
+            },
+            {
+                "@store_code": "HNM_CA_01",
+                "retailer_code": "HNM_CA",
+                "retailer_name": "H AND M",
+                "brand_logo_url": "http://www.brandsoftheworld.com/sites/default/files/styles/logo-thumbnail/public/0000/5239/brand.gif?itok=qQ_Xd2Mr",
+                "brand_tag_url": "http://4.bp.blogspot.com/-UY_5--dpg0U/U5tgb3tixJI/AAAAAAAAGT4/Kzc4BKJbqPA/s1600/location-icon.png",
+                "store_name": "Bloor Street West",
+                "address": {
+                    "street": "15 Bloor Street West",
+                    "unitno": null,
+                    "city": "Toronto",
+                    "post_code": "M4W 1A3",
+                    "state": "ON"
+                },
+                "phone": "4169203592",
+                "longitude": "-79.3898907",
+                "latitude": "43.6700673",
+                "distance": "1.5"
+            },
+            {
+                "@store_code": "HNM_CA_02",
+                "retailer_code": "HNM_CA",
+                "retailer_name": "H AND M",
+                "brand_logo_url": "http://www.brandsoftheworld.com/sites/default/files/styles/logo-thumbnail/public/0000/5239/brand.gif?itok=qQ_Xd2Mr",
+                "brand_tag_url": "http://4.bp.blogspot.com/-UY_5--dpg0U/U5tgb3tixJI/AAAAAAAAGT4/Kzc4BKJbqPA/s1600/location-icon.png",
+                "store_name": "Toronto Eaton Centre",
+                "address": {
+                    "street": "1 Dundas Street West",
+                    "unitno": null,
+                    "city": "Toronto",
+                    "post_code": "M5G 1Z3",
+                    "state": "ON"
+                },
+                "phone": "4165930064",
+                "longitude": "-79.3841176",
+                "latitude": "43.6554038",
+                "distance": "1.5"
+            },
+            {
+                "@store_code": "HNM_CA_03",
+                "retailer_code": "HNM_CA",
+                "retailer_name": "H AND M",
+                "brand_logo_url": "http://www.brandsoftheworld.com/sites/default/files/styles/logo-thumbnail/public/0000/5239/brand.gif?itok=qQ_Xd2Mr",
+                "brand_tag_url": "http://4.bp.blogspot.com/-UY_5--dpg0U/U5tgb3tixJI/AAAAAAAAGT4/Kzc4BKJbqPA/s1600/location-icon.png",
+                "store_name": "Queen Street West",
+                "address": {
+                    "street": "427 Queen Street West",
+                    "unitno": null,
+                    "city": "Toronto",
+                    "post_code": "M5V 2A5",
+                    "state": "ON"
+                },
+                "phone": "4165930167",
+                "longitude": "-79.3976218",
+                "latitude": "43.6486395",
+                "distance": "1.5"
+            },
+            {
+                "@store_code": "HNM_CA_04",
+                "retailer_code": "HNM_CA",
+                "retailer_name": "H AND M",
+                "brand_logo_url": "http://www.brandsoftheworld.com/sites/default/files/styles/logo-thumbnail/public/0000/5239/brand.gif?itok=qQ_Xd2Mr",
+                "brand_tag_url": "http://4.bp.blogspot.com/-UY_5--dpg0U/U5tgb3tixJI/AAAAAAAAGT4/Kzc4BKJbqPA/s1600/location-icon.png",
+                "store_name": "Dufferin Mall",
+                "address": {
+                    "street": "900 Dufferin Street",
+                    "unitno": null,
+                    "city": "Toronto",
+                    "post_code": "M6H 4B1",
+                    "state": "ON"
+                },
+                "phone": "4165319618",
+                "longitude": "-79.4352469",
+                "latitude": "43.6560132",
+                "distance": "1.5"
+            },
+            {
+                "@store_code": "HNM_CA_05",
+                "retailer_code": "HNM_CA",
+                "retailer_name": "H AND M",
+                "brand_logo_url": "http://www.brandsoftheworld.com/sites/default/files/styles/logo-thumbnail/public/0000/5239/brand.gif?itok=qQ_Xd2Mr",
+                "brand_tag_url": "http://4.bp.blogspot.com/-UY_5--dpg0U/U5tgb3tixJI/AAAAAAAAGT4/Kzc4BKJbqPA/s1600/location-icon.png",
+                "store_name": "Yorkdale Shopping Centre",
+                "address": {
+                    "street": "3401 Dufferin Street",
+                    "unitno": null,
+                    "city": "Toronto",
+                    "post_code": "M6G 3A1",
+                    "state": "ON"
+                },
+                "phone": "4162563997",
+                "longitude": "-79.4294785",
+                "latitude": "43.6732845",
+                "distance": "1.5"
+            },
+            {
+                "@store_code": "HNM_CA_06",
+                "retailer_code": "HNM_CA",
+                "retailer_name": "H AND M",
+                "brand_logo_url": "http://www.brandsoftheworld.com/sites/default/files/styles/logo-thumbnail/public/0000/5239/brand.gif?itok=qQ_Xd2Mr",
+                "brand_tag_url": "http://4.bp.blogspot.com/-UY_5--dpg0U/U5tgb3tixJI/AAAAAAAAGT4/Kzc4BKJbqPA/s1600/location-icon.png",
+                "store_name": "Sherway Garden",
+                "address": {
+                    "street": "25 The West Mall",
+                    "unitno": null,
+                    "city": "Etobicoke",
+                    "post_code": "M9C 1B8",
+                    "state": "ON"
+                },
+                "phone": "4166211545",
+                "longitude": "-79.55686709999999",
+                "latitude": "43.6112889",
+                "distance": "1.5"
+            },
+            {
+                "@store_code": "OLDNAVY_CA_01",
+                "retailer_code": "OLDNAVY_CA",
+                "retailer_name": "OLD NAVY",
+                "brand_logo_url": "https://www.savvybeaver.ca/Store/images/logo_s/564d641f5b9a802760a6bdec.jpg",
+                "brand_tag_url": "http://geisingeradmi.org/site/assets/files/5464/map-pin.320x300.png",
+                "store_name": "Eaton Centre",
+                "address": {
+                    "street": "260 Yonge Street",
+                    "unitno": null,
+                    "city": "Toronto",
+                    "post_code": "M5B 2L9",
+                    "state": "ON"
+                },
+                "phone": "4165930065",
+                "longitude": "-79.3805654",
+                "latitude": "43.6546609",
+                "distance": "1.5"
+            },
+            {
+                "@store_code": "OLDNAVY_CA_02",
+                "retailer_code": "OLDNAVY_CA",
+                "retailer_name": "OLD NAVY",
+                "brand_logo_url": "https://www.savvybeaver.ca/Store/images/logo_s/564d641f5b9a802760a6bdec.jpg",
+                "brand_tag_url": "http://geisingeradmi.org/site/assets/files/5464/map-pin.320x300.png",
+                "store_name": "Yorkdale Shoping Centre",
+                "address": {
+                    "street": "1 Yorkdale Road",
+                    "unitno": null,
+                    "city": "Toronto",
+                    "post_code": "M6A 3A1",
+                    "state": "ON"
+                },
+                "phone": "4167879384",
+                "longitude": "-79.44917819999999",
+                "latitude": "43.7251234",
+                "distance": "1.5"
+            },
+            {
+                "@store_code": "OLDNAVY_CA_03",
+                "retailer_code": "OLDNAVY_CA",
+                "retailer_name": "OLD NAVY",
+                "brand_logo_url": "https://www.savvybeaver.ca/Store/images/logo_s/564d641f5b9a802760a6bdec.jpg",
+                "brand_tag_url": "http://geisingeradmi.org/site/assets/files/5464/map-pin.320x300.png",
+                "store_name": "Scarborough Town Centre",
+                "address": {
+                    "street": "300 Borough Drive",
+                    "unitno": null,
+                    "city": "Scarborough",
+                    "post_code": "M1P 4P5",
+                    "state": "ON"
+                },
+                "phone": "4162791143",
+                "longitude": "-79.2576385",
+                "latitude": "43.7761307",
+                "distance": "1.5"
+            },
+            {
+                "@store_code": "OLDNAVY_CA_04",
+                "retailer_code": "OLDNAVY_CA",
+                "retailer_name": "OLD NAVY",
+                "brand_logo_url": "https://www.savvybeaver.ca/Store/images/logo_s/564d641f5b9a802760a6bdec.jpg",
+                "brand_tag_url": "http://geisingeradmi.org/site/assets/files/5464/map-pin.320x300.png",
+                "store_name": "Eglington Town Centre",
+                "address": {
+                    "street": "6 Lebovic Avenue",
+                    "unitno": null,
+                    "city": "Scarborough",
+                    "post_code": "M1L 2L8",
+                    "state": "ON"
+                },
+                "phone": "4167577806",
+                "longitude": "-79.2929338",
+                "latitude": "43.7243287",
+                "distance": "1.5"
+            },
+            {
+                "@store_code": "OLDNAVY_CA_05",
+                "retailer_code": "OLDNAVY_CA",
+                "retailer_name": "OLD NAVY",
+                "brand_logo_url": "https://www.savvybeaver.ca/Store/images/logo_s/564d641f5b9a802760a6bdec.jpg",
+                "brand_tag_url": "http://geisingeradmi.org/site/assets/files/5464/map-pin.320x300.png",
+                "store_name": "Stockyards",
+                "address": {
+                    "street": "30 Weston Road",
+                    "unitno": "125",
+                    "city": "Toronto",
+                    "post_code": "M6N 5H3",
+                    "state": "ON"
+                },
+                "phone": "4167610021",
+                "longitude": "-79.468469",
+                "latitude": "43.6729625",
+                "distance": "1.5"
+            },
+            {
+                "@store_code": "OLDNAVY_CA_06",
+                "retailer_code": "OLDNAVY_CA",
+                "retailer_name": "OLD NAVY",
+                "brand_logo_url": "https://www.savvybeaver.ca/Store/images/logo_s/564d641f5b9a802760a6bdec.jpg",
+                "brand_tag_url": "http://geisingeradmi.org/site/assets/files/5464/map-pin.320x300.png",
+                "store_name": "Square One",
+                "address": {
+                    "street": "100 City Centre Drive",
+                    "unitno": null,
+                    "city": "Mississauga",
+                    "post_code": "L5B 1M7",
+                    "state": "ON"
+                },
+                "phone": "9052704841",
+                "longitude": "-79.6423516",
+                "latitude": "43.5931214",
+                "distance": "1.5"
+            },
+            {
+                "@store_code": "OLDNAVY_CA_07",
+                "retailer_code": "OLDNAVY_CA",
+                "retailer_name": "OLD NAVY",
+                "brand_logo_url": "https://www.savvybeaver.ca/Store/images/logo_s/564d641f5b9a802760a6bdec.jpg",
+                "brand_tag_url": "http://geisingeradmi.org/site/assets/files/5464/map-pin.320x300.png",
+                "store_name": "Erin Mills Town Centre",
+                "address": {
+                    "street": "5100 Erin Mills Parkway",
+                    "unitno": null,
+                    "city": "Mississauga",
+                    "post_code": "L5M 4Z5",
+                    "state": "ON"
+                },
+                "phone": "9058280521",
+                "longitude": "-79.7115283",
+                "latitude": "43.5583681",
+                "distance": "1.5"
+            }
+        ]
+    }
+};
+//   var stores;
+//   var url = "/stores.json";
+//   if(ionic.Platform.isAndroid()){
+//       url = "/android_asset/www/stores.json";
+//   }
+//   return {
+//     all: function() {
+//       return $http({method: 'GET', url: url});
+//     },
+//     get: function(storeId) {
+//       for (var i = 0; i < stores.length; i++) {
+//         if (stores[i].id === parseInt(storeId)) {
+//           return stores[i];
+//         }
+//       }
+//       return null;
+//     }
+//   };
 
   return {
     all: function() {
-      return $http({method: 'GET', url: '/stores.json'});
-    },
-    get: function(storeId) {
-      for (var i = 0; i < stores.length; i++) {
-        if (stores[i].id === parseInt(storeId)) {
-          return stores[i];
-        }
-      }
-      return null;
+      return stores.STORES.STORE;
     }
-  };
+  }
 })
 
 .factory('ScanShopList', function() {
@@ -123,6 +670,35 @@ angular.module('starter.services', [])
       return null;
     }
   };
+})
+
+
+
+.factory('Customer', function() {
+  var customer = {
+    "CONSUMER": {
+        "id": "1234567890",
+        "secret_key": "ABCDEFGH23EFD34YZS",
+        "name": "John DOE",
+        "email": "john.doe@gmail.com",
+        "emailVer": false,
+        "phone": "4161112233",
+        "phoneVer": "true",
+        "dob": "1974-02-14",
+        "addrStreet": "89 KING ST E",
+        "addrUnitno": null,
+        "addrCity": "Toronto",
+        "addrPostCode": "M2V 1B1",
+        "addrState": "Ontario",
+        "country": "CA"
+      }
+    };
+  return {
+    get: function() {
+      return customer.CONSUMER;
+    }
+  };
+
 })
 .factory('Yelp', function($http, $q) {
   return {

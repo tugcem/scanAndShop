@@ -4,10 +4,10 @@
     </button>
     <div class="bar bar-header">
       <div class="title">
-        <input id="toggle-on" class="toggle toggle-left" name="toggle" type="radio" ng-click="changeView(true)" checked>
-        <label for="toggle-on" id="toggle-on" class="btn toggle">Waiting</label>
-        <input id="toggle-off" class="toggle toggle-right" name="toggle" ng-click="changeView(false)" type="radio">
-        <label for="toggle-off" id="toggle-off" class="btn toggle">Closed</label>
+        <input id="toggle-on" class="toggle toggle-left" name="toggle" type="radio" ng-click="changeView(true)" type="radio" ng-checked="view">
+        <label for="toggle-on" id="toggle-on" class="switch-label">Waiting</label>
+        <input id="toggle-off" class="toggle toggle-right" name="toggle" ng-click="changeView(false)" type="radio" ng-checked="notView">
+        <label for="toggle-off" id="toggle-off" class="switch-label">Closed</label>
       </div>
     </div>
   </ion-nav-buttons>
