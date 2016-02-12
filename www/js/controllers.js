@@ -49,40 +49,14 @@ angular.module('starter.controllers', ['uiGmapgoogle-maps'])
   };
 
   $scope.markers = [];
-  $scope.infoVisible = false;
-  $scope.infoBusiness = {};
-
-  // Initialize and show infoWindow for business
-  $scope.showInfo = function(marker, eventName, markerModel) {
-    $scope.infoBusiness = markerModel;
-    $scope.infoVisible = true;
-  };
-
-  // Hide infoWindow when 'x' is clicked
-  $scope.hideInfo = function() {
-    $scope.infoVisible = false;
-  };
 
   var initializeMap = function(position) {
-    console.log(position);
-    if (!position) {
-      // Default to downtown Toronto
-      position = {
-        coords: {
-          latitude: 43.6722780,
-          longitude: -79.3745125
-        }
-      };
-    }
-    console.log(position);
-    // TODO add marker on current location
-
     $scope.map = {
       center: {
-        latitude: position.coords.latitude,
-        longitude: position.coords.longitude
+        latitude: 43.6722780,
+        longitude:-79.3745125
       },
-      zoom: 16
+      zoom: 8
     };
 
     // Make info window for marker show up above marker
@@ -93,50 +67,17 @@ angular.module('starter.controllers', ['uiGmapgoogle-maps'])
       }
     };
 
-    Yelp.search(position).then(function(data) {
-      for (var i = 0; i < 10; i++) {
-        var business = data.data.businesses[i];
-        $scope.markers.push({
-          id: i,
-          name: business.name,
-          url: business.url,
-          location: {
-            latitude: business.location.coordinate.latitude,
-            longitude: business.location.coordinate.longitude
-          }
-        });
+    $scope.markers.push({
+      id: i,
+      name: business.name,
+      url: business.url,
+      location: {
+        latitude: business.location.coordinate.latitude,
+        longitude: business.location.coordinate.longitude
       }
-    }, function(error) {
-      console.log("Unable to access yelp");
     });
-  };
+  }
 
-  uiGmapGoogleMapApi.then(function(maps) {
-    // Don't pass timeout parameter here; that is handled by setTimeout below
-    var posOptions = {enableHighAccuracy: false};
-    navigator.geolocation.getCurrentPosition(function(position) {
-      console.log("Got location: " + JSON.stringify(position));
-      initializeMap(position);
-    }, function(error) {
-      console.log(error);
-      initializeMap();
-    }, posOptions);
-  });
-
-  // Deal with case where user does not make a selection
-  $timeout(function() {
-    if (!$scope.map) {
-      console.log("No confirmation from user, using fallback");
-      initializeMap();
-    }
-  }, 5000);
-  // With the new view caching in Ionic, Controllers are only called
-  // when they are recreated or on app start, instead of every page change.
-  // To listen for when this page is active (for example, to refresh data),
-  // listen for the $ionicView.enter event:
-
-  // $scope.$on('$ionicView.enter', function(e) {
-  // });
 })
 .controller('ProductDetailCtrl', function($scope, $stateParams, $state, ScanShopList) {
   $scope.goToList = function() {

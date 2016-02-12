@@ -31,9 +31,8 @@
     </ion-list>
     <div ng-hide="view">
       <ui-gmap-google-map center='map.center' zoom='map.zoom'>
-        <ui-gmap-markers models="markers" coords="'location'" click="showInfo"></ui-gmap-markers>
-        <ui-gmap-window coords="infoBusiness.location" show="infoVisible" closeClick="hideInfo()"
-                        options="windowOptions">
+        <ui-gmap-markers models="markers" coords="'location'" ></ui-gmap-markers>
+        <ui-gmap-window coords="infoBusiness.location" options="windowOptions">
         </ui-gmap-window>
       </ui-gmap-google-map>
     </div>
