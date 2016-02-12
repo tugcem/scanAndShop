@@ -15,20 +15,25 @@
     <ion-list>
       <ion-item class="item-remove-animate item-avatar item-icon-right row" ng-repeat="item in list" type="item-text-wrap" style="padding: %1;">
         <div class="col-20">
-          <img ng-src="{{item.image}}" style="width: 60px; height: 60px;">
+          <img ng-src="{{item.pictUrl}}" style="width: 60px; height: 60px;">
         </div>
         <div class="col-60">
-          <p>{{item.store.name}}</p>
-          <p>{{item.description}}</p>
-          <p>{{item.uid}}</p>
+          <p>{{item.retailerName}}</p>
+          <p>{{item.desc}}</p>
+          <p>{{item.productSku}}</p>
         </div>
-        <div class="col-20" style="margin-left: 5%;">
-          <p>{{item.price}} C$</p>
+        <div class="col-20">
+          <p>{{item.price}} {{item.currency}}</p>
           <div class="row">
-            <div class="col-40"></div>
-            <div class="ion-ios-pricetags col-60" style="color: {{item.status.color}};"></div>
+             <div class="col text-center">
+                <div class="ion-ios-pricetags" style="color: {{item.status.color}};"></div>
+             </div>
           </div>
-          <p>{{item.expectedPrice}} C$</p>
+          <!-- <div class="row"> -->
+            <!-- <div class="col-50"></div> -->
+            <!-- <div class="ion-ios-pricetags" style="color: {{item.status.color}};"></div> -->
+          <!-- </div> -->
+          <p>{{item.expectedPrice}} {{item.currency}}</p>
         </div>
       </ion-item>
     </ion-list>
