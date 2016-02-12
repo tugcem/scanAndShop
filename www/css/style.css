@@ -9701,6 +9701,7 @@ input {
   background-image: url('../img/icon_home_gray.png');
   background-size:contain;
 }
+
 .tabs .tab-item .icon.home-icon-active {
   background-repeat: no-repeat;
   background-position: 50%;
@@ -9746,6 +9747,7 @@ input {
   background-image: url('../img/icon_profile_gray.png');
   background-size:contain;
 }
+
 .tabs .tab-item .icon.profile-icon-active {
   background-repeat: no-repeat;
   background-position: 50%;
