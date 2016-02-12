@@ -9694,6 +9694,65 @@ input {
   background-color: #DDD;
 }
 
+.tabs .tab-item .icon.home-icon {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 80%;
+  background-image: url('../img/icon_home_gray.png');
+  background-size:contain;
+}
+.tabs .tab-item .icon.home-icon-active {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 80%;
+  background-image: url('../img/icon_home_red.png');
+  background-size:contain;
+}
+
+.tabs .tab-item .icon.store-icon {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 80%;
+  background-image: url('../img/icon_store_gray.png');
+  background-size:contain;
+}
+.tabs .tab-item .icon.store-icon-active {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 80%;
+  background-image: url('../img/icon_store_red.png');
+  background-size:contain;
+}
+
+.tabs .tab-item .icon.deal-icon {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 80%;
+  background-image: url('../img/icon_deal_gray.png');
+  background-size:contain;
+}
+.tabs .tab-item .icon.deal-icon-active {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 80%;
+  background-image: url('../img/icon_deal_red.png');
+  background-size:contain;
+}
+
+.tabs .tab-item .icon.profile-icon {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 80%;
+  background-image: url('../img/icon_profile_gray.png');
+  background-size:contain;
+}
+.tabs .tab-item .icon.profile-icon-active {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 80%;
+  background-image: url('../img/icon_profile_red.png');
+  background-size:contain;
+}
 @-webkit-keyframes scaleOut {
   from {
     -webkit-transform: scale(1);

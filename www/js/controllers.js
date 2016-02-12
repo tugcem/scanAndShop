@@ -28,7 +28,7 @@ angular.module('starter.controllers', ['uiGmapgoogle-maps'])
   };
 })
 
-.controller('StoresCtrl', function($scope, Stores, $timeout, uiGmapGoogleMapApi, Yelp) {
+.controller('StoresCtrl', function($scope, Stores, $timeout, uiGmapGoogleMapApi) {
   $scope.view = true;
   $scope.notView = false;
   $scope.stores = Stores.all();
@@ -49,17 +49,28 @@ angular.module('starter.controllers', ['uiGmapgoogle-maps'])
   };
 
   $scope.markers = [];
+  $scope.infoVisible = false;
+  $scope.infoBusiness = {};
 
-  var initializeMap = function(position) {
-    $scope.map = {
-      center: {
+  // Initialize and show infoWindow for business
+  $scope.showInfo = function(marker, eventName, markerModel) {
+    $scope.infoBusiness = markerModel;
+    $scope.infoVisible = true;
+  };
+
+  // Hide infoWindow when 'x' is clicked
+  $scope.hideInfo = function() {
+    $scope.infoVisible = false;
+  };
+
+  uiGmapGoogleMapApi.then(function(maps) {
+    var position = {
+      coords: {
         latitude: 43.6722780,
-        longitude:-79.3745125
-      },
-      zoom: 8
+        longitude: -79.3745125
+      }
     };
 
-    // Make info window for marker show up above marker
     $scope.windowOptions = {
       pixelOffset: {
         height: -32,
@@ -67,17 +78,28 @@ angular.module('starter.controllers', ['uiGmapgoogle-maps'])
       }
     };
 
-    $scope.markers.push({
-      id: i,
-      name: business.name,
-      url: business.url,
-      location: {
-        latitude: business.location.coordinate.latitude,
-        longitude: business.location.coordinate.longitude
-      }
-    });
-  }
+    $scope.map = {
+      center: {
+        latitude: position.coords.latitude,
+        longitude: position.coords.longitude
+      },
+      zoom: 10
+    };
 
+    var count = 0;
+    Stores.all().forEach(function(el) {
+      $scope.markers.push({
+        id: count,
+        name: el.storeName,
+        location: {
+          latitude: el.latitude,
+          longitude: el.longitude
+        },
+        icon: el.brandTagUrl
+      });
+      count++
+    });
+  });
 })
 .controller('ProductDetailCtrl', function($scope, $stateParams, $state, ScanShopList) {
   $scope.goToList = function() {
