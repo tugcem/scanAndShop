@@ -64,10 +64,24 @@ angular.module('starter.controllers', ['uiGmapgoogle-maps'])
   };
 
   uiGmapGoogleMapApi.then(function(maps) {
+    var count = 0;
+    Stores.all().forEach(function(el) {
+      $scope.markers.push({
+        id: count,
+        name: el.storeName,
+        location: {
+          latitude: el.latitude,
+          longitude: el.longitude
+        },
+        icon: el.brandTagUrl
+      });
+      count++
+    });
+
     var position = {
       coords: {
-        latitude: 43.6722780,
-        longitude: -79.3745125
+        latitude: 43.7761307,
+        longitude: -79.7115283
       }
     };
 
@@ -85,20 +99,6 @@ angular.module('starter.controllers', ['uiGmapgoogle-maps'])
       },
       zoom: 10
     };
-
-    var count = 0;
-    Stores.all().forEach(function(el) {
-      $scope.markers.push({
-        id: count,
-        name: el.storeName,
-        location: {
-          latitude: el.latitude,
-          longitude: el.longitude
-        },
-        icon: el.brandTagUrl
-      });
-      count++
-    });
   });
 })
 .controller('ProductDetailCtrl', function($scope, $stateParams, $state, ScanShopList) {

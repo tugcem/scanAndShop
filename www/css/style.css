@@ -9637,7 +9637,9 @@ input[type="radio"].toggle + label {
   border-radius: 0px 8px 8px 0px;
 }
 
-.angular-google-map-container { height: 400px; }
+.angular-google-map-container {
+  height: 400px;
+ }
 
 .smaller {
   font-size: 11px;
