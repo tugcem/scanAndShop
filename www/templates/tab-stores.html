@@ -2,9 +2,9 @@
   <ion-nav-buttons>
     <div class="bar bar-header">
       <div class="title">
-        <input id="toggle-on" class="toggle toggle-left" name="toggle" type="radio" on-tap="changeView(true)" ng-checked="view">
+        <input id="toggle-on" class="toggle toggle-left" name="toggle" type="radio" on-click="changeView(true)" ng-checked="view">
         <label for="toggle-on" id="toggle-on" class="switch-label switch-pad">List</label>
-        <input id="toggle-off" class="toggle toggle-right" name="toggle" on-tap="changeView(false)" type="radio"  ng-checked="notView">
+        <input id="toggle-off" class="toggle toggle-right" name="toggle" on-click="changeView(false)" type="radio"  ng-checked="notView">
         <label for="toggle-off" id="toggle-off" class="switch-label switch-pad">Map</label>
       </div>
     </div>
