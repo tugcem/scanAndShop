@@ -29,8 +29,13 @@ angular.module('starter.controllers', ['uiGmapgoogle-maps'])
 })
 
 .controller('StoresCtrl', function($scope, Stores, $timeout, uiGmapGoogleMapApi) {
-  $scope.view = true;
-  $scope.notView = false;
+  $scope.data = {
+      clientSide : 'list'
+  };
+  $scope.changeView = function(value) {
+    $scope.data.clientSide = value;
+  };
+
   $scope.stores = Stores.all();
   // Stores.all().then(function(data) {
   //   $scope.stores = data.data.STORES.STORE;
@@ -38,14 +43,8 @@ angular.module('starter.controllers', ['uiGmapgoogle-maps'])
   //   console.log(err);
   // });
   $scope.selected = 0;
-
   $scope.select= function(index) {
      $scope.selected = index;
-  };
-
-  $scope.changeView = function (value) {
-    $scope.view = value;
-    $scope.notView = !value;
   };
 
   $scope.markers = [];
@@ -63,39 +62,38 @@ angular.module('starter.controllers', ['uiGmapgoogle-maps'])
     $scope.infoVisible = false;
   };
 
-  uiGmapGoogleMapApi.then(function(maps) {
-    var count = 0;
-    Stores.all().forEach(function(el) {
-      $scope.markers.push({
-        id: count,
-        name: el.storeName,
-        location: {
-          latitude: el.latitude,
-          longitude: el.longitude
-        },
-        icon: el.brandTagUrl
-      });
-      count++
+  var count = 0;
+  Stores.all().forEach(function(el) {
+    $scope.markers.push({
+      id: count,
+      name: el.storeName,
+      location: {
+        latitude: el.latitude,
+        longitude: el.longitude
+      },
+      icon: el.brandTagUrl
     });
+    count++
+  });
 
-    var position = {
-      coords: {
-        latitude: 43.7761307,
-        longitude: -79.7115283
-      }
-    };
+  $scope.windowOptions = {
+    pixelOffset: {
+      height: -32,
+      width: 0
+    }
+  };
 
-    $scope.windowOptions = {
-      pixelOffset: {
-        height: -32,
-        width: 0
-      }
-    };
-
+  uiGmapGoogleMapApi.then(function(maps) {
+    if( typeof _.contains === 'undefined' ) {
+      _.contains = _.includes;
+    }
+    if( typeof _.object === 'undefined' ) {
+      _.object = _.zipObject;
+    }
     $scope.map = {
       center: {
-        latitude: position.coords.latitude,
-        longitude: position.coords.longitude
+        latitude: 43.730309,
+        longitude: -79.376378
       },
       zoom: 10
     };
@@ -109,14 +107,14 @@ angular.module('starter.controllers', ['uiGmapgoogle-maps'])
   $scope.product = ScanShopList.get();
 })
 .controller('ScanShopListCtrl', function($scope, $stateParams, ScanShopList) {
-  $scope.view = true;
-  $scope.notView = false;
-  $scope.list = ScanShopList.waiting();
+  $scope.waitingList = ScanShopList.waiting();
+  $scope.closedlist = ScanShopList.closed();
+  $scope.data = {
+    listType: 'waiting'
+  };
 
   $scope.changeView = function (value) {
-    $scope.view = value;
-    $scope.notView = !value;
-    $scope.list = value ? ScanShopList.waiting() : ScanShopList.closed();
+    $scope.data.listType = value;
   };
 
   $scope.readBarcode = function() {

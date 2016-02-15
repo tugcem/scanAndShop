@@ -4,16 +4,40 @@
     </button>
     <div class="bar bar-header">
       <div class="title">
-        <input id="toggle-on" class="toggle toggle-left" name="toggle" type="radio" ng-click="changeView(true)" type="radio" ng-checked="view">
+        <input id="toggle-on" class="toggle toggle-left" name="toggle" type="radio" ng-click="changeView('waiting')" type="radio" ng-checked="data.listType == 'waiting'">
         <label for="toggle-on" id="toggle-on" class="switch-label">Waiting</label>
-        <input id="toggle-off" class="toggle toggle-right" name="toggle" ng-click="changeView(false)" type="radio" ng-checked="notView">
+        <input id="toggle-off" class="toggle toggle-right" name="toggle" ng-click="changeView('closed')" type="radio" ng-checked="data.listType == 'closed'">
         <label for="toggle-off" id="toggle-off" class="switch-label">Closed</label>
       </div>
     </div>
   </ion-nav-buttons>
   <ion-content>
     <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right row" ng-repeat="item in list" type="item-text-wrap" style="padding: %1;">
+      <ion-item ng-show="data.listType == 'waiting'" class="item-remove-animate item-avatar item-icon-right row" ng-repeat="item in waitingList" type="item-text-wrap" style="padding: %1;">
+        <div class="col-20">
+          <img ng-src="{{item.pictUrl}}" style="width: 60px; height: 60px;">
+        </div>
+        <div class="col-60">
+          <p>{{item.retailerName}}</p>
+          <p>{{item.desc}}</p>
+          <p>{{item.productSku}}</p>
+        </div>
+        <div class="col-20">
+          <p>{{item.price}} {{item.currency}}</p>
+          <div class="row">
+             <div class="col text-center">
+                <div class="ion-ios-pricetags" style="color: {{item.status.color}};"></div>
+             </div>
+          </div>
+          <!-- <div class="row"> -->
+            <!-- <div class="col-50"></div> -->
+            <!-- <div class="ion-ios-pricetags" style="color: {{item.status.color}};"></div> -->
+          <!-- </div> -->
+          <p>{{item.expectedPrice}} {{item.currency}}</p>
+        </div>
+      </ion-item>
+
+      <ion-item ng-show="data.listType == 'closed'" class="item-remove-animate item-avatar item-icon-right row" ng-repeat="item in closedlist" type="item-text-wrap" style="padding: %1;">
         <div class="col-20">
           <img ng-src="{{item.pictUrl}}" style="width: 60px; height: 60px;">
         </div>
