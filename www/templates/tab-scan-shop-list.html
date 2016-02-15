@@ -1,8 +1,8 @@
 <ion-view view-title="">
   <ion-nav-buttons>
-    <button class="button button-icon icon ion-ios-plus-outline active" on-tap="readBarcode()">
-    </button>
     <div class="bar bar-header">
+      <button class="button button-icon icon ion-ios-plus-outline active" ng-click="readBarcode()">
+      </button>
       <div class="title">
         <input id="toggle-on" class="toggle toggle-left" name="toggle" type="radio" ng-click="changeView('waiting')" type="radio" ng-checked="data.listType == 'waiting'">
         <label for="toggle-on" id="toggle-on" class="switch-label">Waiting</label>
@@ -13,7 +13,7 @@
   </ion-nav-buttons>
   <ion-content>
     <ion-list>
-      <ion-item ng-show="data.listType == 'waiting'" class="item-remove-animate item-avatar item-icon-right row" ng-repeat="item in waitingList" type="item-text-wrap" style="padding: %1;">
+      <ion-item ng-show="data.listType == 'waiting'" class="item-remove-animate item-avatar item-icon-right row" ng-repeat="item in waitingList" type="item-text-wrap" ng-click="goToDeal(item.productSku)" style="padding: %1;">
         <div class="col-20">
           <img ng-src="{{item.pictUrl}}" style="width: 60px; height: 60px;">
         </div>
@@ -23,21 +23,21 @@
           <p>{{item.productSku}}</p>
         </div>
         <div class="col-20">
-          <p>{{item.price}} {{item.currency}}</p>
-          <div class="row">
+          <p style="float: right;">{{item.price}} {{item.currency}}</p>
+          <div class="row row-center">
              <div class="col text-center">
-                <div class="ion-ios-pricetags" style="color: {{item.status.color}};"></div>
+                <div class="ion-ios-pricetags" style="font-size: 22px; color: {{item.status.color}};"></div>
              </div>
           </div>
           <!-- <div class="row"> -->
             <!-- <div class="col-50"></div> -->
             <!-- <div class="ion-ios-pricetags" style="color: {{item.status.color}};"></div> -->
           <!-- </div> -->
-          <p>{{item.expectedPrice}} {{item.currency}}</p>
+          <p style="float: right;">{{item.expectedPrice}} {{item.currency}}</p>
         </div>
       </ion-item>
 
-      <ion-item ng-show="data.listType == 'closed'" class="item-remove-animate item-avatar item-icon-right row" ng-repeat="item in closedlist" type="item-text-wrap" style="padding: %1;">
+      <ion-item ng-show="data.listType == 'closed'" class="item-remove-animate item-avatar item-icon-right row" ng-repeat="item in closedlist" type="item-text-wrap" ng-click="goToDeal(item.productSku)" style="padding: %1;">
         <div class="col-20">
           <img ng-src="{{item.pictUrl}}" style="width: 60px; height: 60px;">
         </div>
@@ -47,17 +47,17 @@
           <p>{{item.productSku}}</p>
         </div>
         <div class="col-20">
-          <p>{{item.price}} {{item.currency}}</p>
-          <div class="row">
+          <p style="float: right;">{{item.price}} {{item.currency}}</p>
+          <div class="row row-center">
              <div class="col text-center">
-                <div class="ion-ios-pricetags" style="color: {{item.status.color}};"></div>
+                <div class="ion-ios-pricetags" style="font-size: 22px; color: {{item.status.color}};"></div>
              </div>
           </div>
           <!-- <div class="row"> -->
             <!-- <div class="col-50"></div> -->
             <!-- <div class="ion-ios-pricetags" style="color: {{item.status.color}};"></div> -->
           <!-- </div> -->
-          <p>{{item.expectedPrice}} {{item.currency}}</p>
+          <p style="float: right;">{{item.expectedPrice}} {{item.currency}}</p>
         </div>
       </ion-item>
     </ion-list>

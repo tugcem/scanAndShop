@@ -198,7 +198,7 @@ angular.module('starter.services', [])
                 "@store_code": "EDDIEBAUER_CA_01",
                 "retailer_code": "EDDIEBAUER_CA",
                 "retailer_name": "Eddie Bauer",
-                "brand_logo_url": "http://photos.prnewswire.com/prn/20141223/166032LOGO",
+                "brand_logo_url": "https://adc3ef35f321fe6e725a-fb8aac3b3bf42afe824f73b606f0aa4c.ssl.cf1.rackcdn.com/tenantlogos/12962.png",
                 "brandTagUrl": "http://maps.google.com/mapfiles/ms/icons/green-dot.png",
                 "storeName": "Toronto Eaton Centre",
                 "address": {
@@ -217,7 +217,7 @@ angular.module('starter.services', [])
                 "@store_code": "EDDIEBAUER_CA_02",
                 "retailer_code": "EDDIEBAUER_CA",
                 "retailer_name": "Eddie Bauer",
-                "brand_logo_url": "http://photos.prnewswire.com/prn/20141223/166032LOGO",
+                "brand_logo_url": "https://adc3ef35f321fe6e725a-fb8aac3b3bf42afe824f73b606f0aa4c.ssl.cf1.rackcdn.com/tenantlogos/12962.png",
                 "brandTagUrl": "http://maps.google.com/mapfiles/ms/icons/green-dot.png",
                 "storeName": "Shops at Don Mills",
                 "address": {
@@ -236,7 +236,7 @@ angular.module('starter.services', [])
                 "@store_code": "EDDIEBAUER_CA_03",
                 "retailer_code": "EDDIEBAUER_CA",
                 "retailer_name": "Eddie Bauer",
-                "brand_logo_url": "http://photos.prnewswire.com/prn/20141223/166032LOGO",
+                "brand_logo_url": "https://adc3ef35f321fe6e725a-fb8aac3b3bf42afe824f73b606f0aa4c.ssl.cf1.rackcdn.com/tenantlogos/12962.png",
                 "brandTagUrl": "http://maps.google.com/mapfiles/ms/icons/green-dot.png",
                 "storeName": "Sherway Gardens",
                 "address": {
@@ -255,7 +255,7 @@ angular.module('starter.services', [])
                 "@store_code": "EDDIEBAUER_CA_04",
                 "retailer_code": "EDDIEBAUER_CA",
                 "retailer_name": "Eddie Bauer",
-                "brand_logo_url": "http://photos.prnewswire.com/prn/20141223/166032LOGO",
+                "brand_logo_url": "https://adc3ef35f321fe6e725a-fb8aac3b3bf42afe824f73b606f0aa4c.ssl.cf1.rackcdn.com/tenantlogos/12962.png",
                 "brandTagUrl": "http://maps.google.com/mapfiles/ms/icons/green-dot.png",
                 "storeName": "Fairview Mall",
                 "address": {
@@ -274,7 +274,7 @@ angular.module('starter.services', [])
                 "@store_code": "EDDIEBAUER_CA_05",
                 "retailer_code": "EDDIEBAUER_CA",
                 "retailer_name": "Eddie Bauer",
-                "brand_logo_url": "http://photos.prnewswire.com/prn/20141223/166032LOGO",
+                "brand_logo_url": "https://adc3ef35f321fe6e725a-fb8aac3b3bf42afe824f73b606f0aa4c.ssl.cf1.rackcdn.com/tenantlogos/12962.png",
                 "brandTagUrl": "http://maps.google.com/mapfiles/ms/icons/green-dot.png",
                 "storeName": "Square One Centre",
                 "address": {
@@ -600,9 +600,9 @@ angular.module('starter.services', [])
                         "color": "TAN",
                         "size": "5,6,7,8,9,10",
                         "pictUrl": "http://demandware.edgesuite.net/sits_pod32/dw/image/v2/AACG_PRD/on/demandware.static/-/Sites-roots_master_catalog/default/dwb684f584/16010237_Y24_a.jpg?sw=962&sh=962&sm=fit",
-                        "feature_method": "TEXT",
-                        "featureText": "A hand sewn moccasin with raw hide lace detail.Features\\nMade from 100% genuine suede\\nWool sherpa lining for warmth and comfort\\nThin rubber outsole",
+                        "featureText": "A hand sewn moccasin with raw hide lace detail.Features Made from 100% genuine suede Wool sherpa lining for warmth and comfort Thin rubber outsole",
                         "retailerName": "Roots",
+                        "retailerLogo": "http://demandware.edgesuite.net/aacg_prd/on/demandware.static/Sites-RootsCA-Site/-/default/dw6a14487d/images/header/Roots_logo_updated.png",
                         "status": {
                           "description": "waiting",
                           "color": "#F2BA23"
@@ -615,6 +615,7 @@ angular.module('starter.services', [])
                         "expectedPrice": "10.00",
                         "currency": "CAD",
                         "retailerName": "Roots",
+                        "retailerLogo": "http://demandware.edgesuite.net/aacg_prd/on/demandware.static/Sites-RootsCA-Site/-/default/dw6a14487d/images/header/Roots_logo_updated.png",
                         "color": "FATIGUE,MULTI",
                         "status": {
                           "description": "closed",
@@ -622,65 +623,7 @@ angular.module('starter.services', [])
                         },
                         "size": "ONE SIZE",
                         "pictUrl": "http://demandware.edgesuite.net/sits_pod32/dw/image/v2/AACG_PRD/on/demandware.static/-/Sites-roots_master_catalog/default/dw12858fc9/14013548_A24_b.jpg?sw=2000&sh=2000&sm=fit",
-                        "feature_method": "HTML",
-                        "featureText": {
-                            "html": {
-                                "@lang": "en",
-                                "head": {
-                                    "meta": {
-                                        "@charset": "UTF-8"
-                                    },
-                                    "title": "Title"
-                                },
-                                "body": {
-                                    "div": {
-                                        "p": [
-                                            {
-                                                "@dir": "ltr",
-                                                "@style": "line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;",
-                                                "i": "digitally printed",
-                                                "#text": "This toque is  to capture the feeling of the great outdoors. Mix and match with our sweats for an added pop of colour. Wear brim up or down, dependable to one\u2019s preference. &nbsp;"
-                                            },
-                                            {
-                                                "@dir": "ltr",
-                                                "@style": "line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;",
-                                                "b": "ABOUT"
-                                            },
-                                            {
-                                                "@dir": "ltr",
-                                                "@style": "line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;",
-                                                "#text": "Made from 100% Polyester"
-                                            },
-                                            {
-                                                "@dir": "ltr",
-                                                "@style": "line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;",
-                                                "b": "LOOK AFTER ME"
-                                            },
-                                            {
-                                                "@dir": "ltr",
-                                                "@style": "line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;",
-                                                "#text": "Hand Wash Cold Separately"
-                                            },
-                                            {
-                                                "@dir": "ltr",
-                                                "@style": "line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;",
-                                                "#text": "No Bleach"
-                                            },
-                                            {
-                                                "@dir": "ltr",
-                                                "@style": "line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;",
-                                                "#text": "Lay Flat Dry"
-                                            },
-                                            {
-                                                "@dir": "ltr",
-                                                "@style": "line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;",
-                                                "#text": "No Iron"
-                                            }
-                                        ]
-                                    }
-                                }
-                            }
-                        }
+                        "featureText": "This toque is  to capture the feeling of the great outdoors. Mix and match with our sweats for an added pop of colour. Wear brim up or down, dependable to ones preference."
                     }
                 ]
             },
@@ -694,6 +637,7 @@ angular.module('starter.services', [])
                         "expectedPrice": "100.00",
                         "currency": "CAD",
                         "retailerName": "Eddie Bauer",
+                        "retailerLogo": "https://adc3ef35f321fe6e725a-fb8aac3b3bf42afe824f73b606f0aa4c.ssl.cf1.rackcdn.com/tenantlogos/12962.png",
                         "color": "Black,Carbon,Dk Loden,Driftwood,Navy,Plum",
                         "status": {
                           "description": "waiting",
@@ -701,92 +645,7 @@ angular.module('starter.services', [])
                         },
                         "size": "XS,S,M,L,XL,XXL",
                         "pictUrl": "http://eddiebauer.scene7.com/is/image/EddieBauer/0068723_400C1?$xlarge$",
-                        "feature_method": "HTML",
-                        "featureText": {
-                            "html": {
-                                "@lang": "en",
-                                "head": {
-                                    "meta": {
-                                        "@charset": "UTF-8"
-                                    },
-                                    "title": "Title"
-                                },
-                                "body": {
-                                    "div": [
-                                        {
-                                            "@id": "activity_rating",
-                                            "img": {
-                                                "@src": "//eddiebauer.scene7.com/is/image/EBContent/warmest-30?&fmt=png-alpha",
-                                                "@align": "left"
-                                            },
-                                            "p": {
-                                                "@style": "font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; padding-top:10px; color:#555;",
-                                                "br": null,
-                                                "#text": "LOW ACTIVITY RATING 30&deg;F.MODERATE ACTIVITY RATING -30&deg;F."
-                                            }
-                                        },
-                                        {
-                                            "@id": "warmwarmerwarmestmodal_container",
-                                            "@style": "display:none !important;",
-                                            "div": {
-                                                "@id": "warmwarmerwarmestmodal",
-                                                "img": {
-                                                    "@src": "//eddiebauer.scene7.com/is/image/EBContent/warmwarmerwarmestmodal?$png$&scl=1"
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "@class": "subheading",
-                                            "#text": "FIT"
-                                        }
-                                    ],
-                                    "p": [
-                                        {
-                                            "@class": "overview message title",
-                                            "h5": {
-                                                "@class": "adventureTitle",
-                                                "#text": "World's Finest Down&reg;"
-                                            }
-                                        },
-                                        {
-                                            "@class": "overview",
-                                            "br": [
-                                                null,
-                                                null,
-                                                null,
-                                                "\u2014CindyAnn"
-                                            ],
-                                            "b": "Warmest Coat I've Ever Worn",
-                                            "#text": "Besides warmth, our parka provides extra weather protection with exclusive StormRepel&reg; durable water-repellent (DWR) finish. Water beads on the nylon/polyester/cotton shell rather than soaking into the fabric. 650 fill Premium Down for exceptional warmth without weight. Metallic cross dyeing process gives the fabric a subtle, iridescent sheen. Two-way front zipper adjusts easily when you're active or sitting.\"Now there's no weather that will keep me indoors! With the removable hood, this coat is a must have.\""
-                                        }
-                                    ],
-                                    "ul": [
-                                        {
-                                            "@class": "details",
-                                            "li": [
-                                                "53% nylon/32% polyester/15% cotton shell",
-                                                "StormRepel&reg; DWR finish so water doesn't soak in",
-                                                "650 fill Premium Down for ultralight warmth",
-                                                "Two-way front zipper",
-                                                "Snap-off hood with detachable faux-fur ruff",
-                                                "Fleece-lined zip pockets keep hands warm",
-                                                "Adjustable cuffs with interior storm cuffs seal in heat",
-                                                "Available in Regular, Petite, Tall, and Plus sizes",
-                                                "Average length: Reg. 35\", Petite 34\", Tall 36.5\"; Plus (1X) 37\"",
-                                                "Machine wash",
-                                                "Imported"
-                                            ]
-                                        },
-                                        {
-                                            "@class": "fit",
-                                            "li": "Classic: Our most universal fit. Not too slim, not too relaxed on body. Designed to fit over midweight layers."
-                                        }
-                                    ],
-                                    "b": "NOTE:",
-                                    "#text": "Temperature ratings are based on a controlled laboratory test, using low and moderate activity levels. Also consider: your sensitivity to cold and wind-chill; time of exposure; activity level; and use of layering."
-                                }
-                            }
-                        }
+                        "featureText": "Besides warmth, our parka provides extra weather protection with exclusive StormRepel&reg; durable water-repellent (DWR) finish. Water beads on the nylon/polyester/cotton shell rather than soaking into the fabric. 650 fill Premium Down for exceptional warmth without weight. Metallic cross dyeing process gives the fabric a subtle, iridescent sheen. Two-way front zipper adjusts easily when you're active or sitting.\"Now there's no weather that will keep me indoors! With the removable hood, this coat is a must have."
                     },
                     {
                         "productSku": "i20 792 6191",
@@ -795,6 +654,7 @@ angular.module('starter.services', [])
                         "expectedPrice": "50.00",
                         "currency": "CAD",
                         "retailerName": "Eddie Bauer",
+                        "retailerLogo": "https://adc3ef35f321fe6e725a-fb8aac3b3bf42afe824f73b606f0aa4c.ssl.cf1.rackcdn.com/tenantlogos/12962.png",
                         "color": "Black,Driftwood",
                         "status": {
                           "description": "closed",
@@ -802,53 +662,7 @@ angular.module('starter.services', [])
                         },
                         "size": "6M,6.5M,7M,7.5M,8M,9M,9.5M,10M,11M",
                         "pictUrl": "http://eddiebauer.scene7.com/is/image/EddieBauer/0206191_526C1?$xlarge$",
-                        "feature_method": "HTML",
-                        "featureText": {
-                            "html": {
-                                "@lang": "en",
-                                "head": {
-                                    "meta": {
-                                        "@charset": "UTF-8"
-                                    },
-                                    "title": "Title"
-                                },
-                                "body": {
-                                    "p": [
-                                        {
-                                            "@class": "overview message title",
-                                            "h5": {
-                                                "@class": "adventureTitle",
-                                                "#text": "Live Your Adventure&reg;"
-                                            }
-                                        },
-                                        {
-                                            "@class": "overview",
-                                            "#text": "Enjoy dry, warm excursions all winter long. Constructed with waterproof synthetic nubuck leather plus ThermaFill&reg; 200 insulation, this boot provides hours of comfort, even as temperatures drop. Grippy MultiPitch Pro outsole features an exclusive lug design using Vibram&reg; XS Trek rubber compound for best-in-class performance, durability, and exceptional traction on varied terrain."
-                                        }
-                                    ],
-                                    "ul": {
-                                        "@class": "details",
-                                        "li": [
-                                            {
-                                                "a": {
-                                                    "@href": "#WeatherEdge",
-                                                    "@name": "WeatherEdge",
-                                                    "@class": "toolTip link",
-                                                    "#text": "WeatherEdge&reg;"
-                                                },
-                                                "#text": "waterproof/breathable membrane"
-                                            },
-                                            "InsoFit&reg; cushioning EVA footbed",
-                                            "MidLite&reg; premium EVA midsole",
-                                            "Faux fur cuff lining",
-                                            "Shaft height: 10\"",
-                                            "Women's sizes: 6-10, 11",
-                                            "Imported"
-                                        ]
-                                    }
-                                }
-                            }
-                        }
+                        "featureText": "Enjoy dry, warm excursions all winter long. Constructed with waterproof synthetic nubuck leather plus ThermaFill&reg; 200 insulation, this boot provides hours of comfort, even as temperatures drop. Grippy MultiPitch Pro outsole features an exclusive lug design using Vibram&reg; XS Trek rubber compound for best-in-class performance, durability, and exceptional traction on varied terrain."
                     }
                 ]
             }
@@ -870,6 +684,14 @@ angular.module('starter.services', [])
       return true;
     }
   };
+
+  function filterByProductSku(productSku) {
+    return function(obj) {
+      if (obj.productSku === productSku){
+        return true;
+      }
+    }
+  };
   return {
     waiting: function() {
       return all().filter(filterByWaitingStatus);
@@ -877,8 +699,8 @@ angular.module('starter.services', [])
     closed: function() {
       return all().filter(filterByClosedStatus);
     },
-    get: function() {
-      return scanShopList.PRODUCTS.RETAILER[0].PRODUCT[0];
+    get: function(productSku) {
+      return all().filter(filterByProductSku(productSku))[0];
     }
   };
 })

@@ -1,7 +1,7 @@
 <ion-view view-title="Product Info">
   <ion-nav-buttons>
     <div class="bar bar-header">
-      <button class="button button-icon icon ion-chevron-left active" ng-click="goToList()">
+      <button class="button button-icon ion-chevron-left active" ng-click="goToList()">
       </button>
       <div class="smaller">Back to <br> My List</div>
     </div>
@@ -9,47 +9,50 @@
   <ion-content class="padding mt-5">
     <h5><strong>{{product.desc}}</strong></h5>
 
-    <div class="row mt-5" >
+    <div class="row mt-5">
       <div class="col-25">
         <img ng-src="{{product.pictUrl}}" style="width: 128px; height: 128px">
       </div>
       <div class="col-75 col-offset-10">
         <div class="row">
-          <div class="col-50 col-offset-10">
+          <div class="col-50 col-bottom col-offset-10">
             <div class="fixed-color">Current Price</div>
             <div class="fixed-color price">{{product.price}} {{product.currency}}</div>
           </div>
-          <img ng-src="{{product.retailerLogo}}" style="width: 28px; height: 28px">
+          <img ng-src="{{product.retailerLogo}}" style="width: 60px; height: 60px">
         </div>
 
         <div class="col col-offset-10 mt-5" >
-          <div>product code: {{product.productSku}}</div>
-          <div>color : {{product.color}}</div>
-          <div>size : {{product.size}}</div>
+          <div>Product Code: {{product.productSku}}</div>
+          <div>Color : {{product.color}}</div>
+          <div>Size : {{product.size}}</div>
         </div>
       </div>
     </div>
-    <div ng-hide="showForm">
+    <div ng-if="showDescription">
       <p class="mt-5">{{product.featureText}}</p>
+    </div>
+
+    <div ng-if="showMakeDeal">
       <div class="row mt-5">
         <div class="col text-center">
-          <button ng-click="showForm=!showForm" class="button button-icon toggle text-center request-button fixed-color"> Make a Shopping Request </button>
+          <button ng-click="makeDeal()" class="button button-icon toggle text-center request-button fixed-color"> Make a Shopping Request </button>
         </div>
       </div>
     </div>
 
-    <div ng-show="showForm">
+    <div ng-if="showForm">
       <div class="row mt-5">
         <div class="col-40">
           <span class="input-label">Preffered Price</span>
           <label class="item item-input">
-            <input type="number">
+            <input type="number" ng-model="preferredPrice">
           </label>
         </div>
         <div class="col-10 fixed-color"> or</div>
         <div class="col-50">
           <span class="input-label"> Preffered Discount</span>
-          <label class="item item-input">
+          <label class="item item-input" ng-model="preferredDiscount">
             <input type="number">
           </label>
         </div>

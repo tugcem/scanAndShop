@@ -6,11 +6,11 @@ angular.module('starter.controllers', ['uiGmapgoogle-maps'])
       cordova.plugins.barcodeScanner
         .scan(function(barcodeData) {
           console.log('barcodeData', barcodeData);
-          $state.go('tab.product-detail');
+          $state.go('tab.product-detail', { productSku: "16010237", showDescription: true, showMakeDeal: true, showForm: false});
           // Success! Barcode data is here
         }, function(error) {
           console.log('error', error);
-          $state.go('tab.product-detail');
+          $state.go('tab.dash');
           // An error occurred
         });
 
@@ -103,10 +103,31 @@ angular.module('starter.controllers', ['uiGmapgoogle-maps'])
   $scope.goToList = function() {
     $state.go('tab.scan-shop-list');
   };
-  $scope.showForm = false;
-  $scope.product = ScanShopList.get();
+  $scope.showDescription = $stateParams.showDescription;
+  $scope.showMakeDeal = $stateParams.showMakeDeal;
+  $scope.showForm = $stateParams.showForm;
+  $scope.product = ScanShopList.get($stateParams.productSku);
+
+  // $scope.$on('$locationChangeStart', function( event ) {
+  //   $scope.preferredPrice = null;
+  //   $scope.preferredDiscount = null;
+  //   $scope.showForm = false;
+  // });
+  $scope.makeDeal = function() {
+    $scope.showDescription = false;
+    $scope.showMakeDeal = false;
+    $scope.showForm = true;
+  };
+  $scope.saveRequest = function() {
+    $scope.preferredPrice = null;
+    $scope.preferredDiscount = null;
+    $scope.showDescription = false;
+    $scope.showMakeDeal = false;
+    $scope.showForm = false;
+    $state.go('tab.scan-shop-list');
+  };
 })
-.controller('ScanShopListCtrl', function($scope, $stateParams, ScanShopList) {
+.controller('ScanShopListCtrl', function($scope, $state, $stateParams, ScanShopList) {
   $scope.waitingList = ScanShopList.waiting();
   $scope.closedlist = ScanShopList.closed();
   $scope.data = {
@@ -117,16 +138,16 @@ angular.module('starter.controllers', ['uiGmapgoogle-maps'])
     $scope.data.listType = value;
   };
 
-  $scope.readBarcode = function() {
+  $scope.readBarcode = function () {
     document.addEventListener("deviceready", function () {
       cordova.plugins.barcodeScanner
         .scan(function(barcodeData) {
           console.log('barcodeData', barcodeData);
-          $state.go('tab.product-detail');
+          $state.go('tab.product-detail', { productSku: "16010237", showDescription: true, showMakeDeal: true, showForm: false});
           // Success! Barcode data is here
         }, function(error) {
           console.log('error', error);
-          $state.go('tab.product-detail');
+          $state.go('tab.dash');
           // An error occurred
         });
 
@@ -141,6 +162,10 @@ angular.module('starter.controllers', ['uiGmapgoogle-maps'])
       //   });
 
     }, false);
+  };
+
+  $scope.goToDeal = function (productSku) {
+    $state.go('tab.product-detail', { productSku: productSku, showDescription: true, showMakeDeal: false, showForm: false });
   };
 })
 .controller('ProfileCtrl', function($scope, $ionicActionSheet, Customer, $state) {

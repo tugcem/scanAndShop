@@ -9657,11 +9657,6 @@ input[type="radio"].toggle + label {
   font-size: 18px;
   font-weight: bolder;
 }
-
-.mt-5 {
-  margin-top: 5%;
-}
-
 .request-button {
   padding: 0% 10% 0% 10%;
   border-radius: 30px;

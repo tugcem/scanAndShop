@@ -71,12 +71,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   })
 
   .state('tab.product-detail', {
-    url: '/scan-shop-list/product-detail',
+    url: '/scan-shop-list/:productSku/product-detail',
     views: {
       'tab-scan-shop-list': {
         templateUrl: 'templates/product-detail.html',
         controller: 'ProductDetailCtrl'
       }
+    },
+    params: {
+      showDescription: true,
+      showMakeDeal: false,
+      showForm: false
     }
   })
 
