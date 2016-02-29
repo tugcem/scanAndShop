@@ -9589,6 +9589,11 @@ a.button {
   background-size: cover;
 }
 
+.product-image {
+  width: 60px;
+  height: 60px;
+  margin-top: 10%;
+}
 
 #profile-image {
   display: block;
@@ -9602,31 +9607,26 @@ a.button {
 }
 
 .block-inline {
-    display: inline-block;
-    vertical-align:top;
-}
-
-input[type="radio"].toggle {
-    display: none;
-    color: #E9070A;
-}
-
-input[type="radio"].toggle:checked + label {
-    color: white;
-    border-color: transparent;
-    background-color: #E9070A;
-}
-
-input[type="radio"].toggle + label {
-    width: 3em;
+  display: inline-block;
+  vertical-align:top;
 }
 
 .toggle {
+  background-color: white;
+  color: #E9070A;
+  width: 3em;
   padding: 0% 18%;
   border-style: solid;
   border-color: #E9070A;
   border-width: 1px;
-  margin-right: 1px;
+  width: 35%;
+  height: 50%;
+}
+
+.toggle.active {
+  color: white;
+  border-color: transparent;
+  background-color: #E9070A;
 }
 
 #toggle-on {

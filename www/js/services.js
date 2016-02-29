@@ -21,7 +21,7 @@ angular.module('starter.services', [])
                 "phone": "4169258900",
                 "longitude": "-79.39047029999999",
                 "latitude": "43.6692857",
-                "distance": "1.5"
+                "distance": "1.5 Km"
             },
             {
                 "@store_code": "ROOTS_CA_02",
@@ -40,7 +40,7 @@ angular.module('starter.services', [])
                 "phone": "4169271989",
                 "longitude": "-79.3899764",
                 "latitude": "43.67887959999999",
-                "distance": "1.5"
+                "distance": "1.5 Km"
             },
             {
                 "@store_code": "ROOTS_CA_03",
@@ -59,7 +59,7 @@ angular.module('starter.services', [])
                 "phone": "4169674499",
                 "longitude": "-79.3941979",
                 "latitude": "43.6888259",
-                "distance": "1.5"
+                "distance": "1.5 Km"
             },
             {
                 "@store_code": "ROOTS_CA_04",
@@ -78,7 +78,7 @@ angular.module('starter.services', [])
                 "phone": "4165939640",
                 "longitude": "-79.3800603",
                 "latitude": "43.6536106",
-                "distance": "1.5"
+                "distance": "1.5 Km"
             },
             {
                 "@store_code": "ROOTS_CA_05",
@@ -97,7 +97,7 @@ angular.module('starter.services', [])
                 "phone": "4163233289",
                 "longitude": "-79.39017679999999",
                 "latitude": "43.6698634",
-                "distance": "1.5"
+                "distance": "1.5 Km"
             },
             {
                 "@store_code": "ROOTS_CA_06",
@@ -116,7 +116,7 @@ angular.module('starter.services', [])
                 "phone": "4163640582",
                 "longitude": "-79.3787906",
                 "latitude": "43.6471458",
-                "distance": "1.5"
+                "distance": "1.5 Km"
             },
             {
                 "@store_code": "ROOTS_CA_07",
@@ -135,7 +135,7 @@ angular.module('starter.services', [])
                 "phone": "4167813574",
                 "longitude": "-79.4648845",
                 "latitude": "43.6986554",
-                "distance": "1.5"
+                "distance": "1.5 Km"
             },
             {
                 "@store_code": "ROOTS_CA_08",
@@ -154,7 +154,7 @@ angular.module('starter.services', [])
                 "phone": "4167818729",
                 "longitude": "-79.46687849999999",
                 "latitude": "43.7180267",
-                "distance": "1.5"
+                "distance": "1.5 Km"
             },
             {
                 "@store_code": "ROOTS_CA_09",
@@ -173,7 +173,7 @@ angular.module('starter.services', [])
                 "phone": "4167833371",
                 "longitude": "-79.4547427",
                 "latitude": "43.7248438",
-                "distance": "1.5"
+                "distance": "1.5 Km"
             },
             {
                 "@store_code": "ROOTS_CA_10",
@@ -192,14 +192,14 @@ angular.module('starter.services', [])
                 "phone": "4166041707",
                 "longitude": "-79.4720055",
                 "latitude": "43.6728418",
-                "distance": "1.5"
+                "distance": "1.5 Km"
             },
             {
                 "@store_code": "EDDIEBAUER_CA_01",
                 "retailer_code": "EDDIEBAUER_CA",
                 "retailer_name": "Eddie Bauer",
                 "brand_logo_url": "https://adc3ef35f321fe6e725a-fb8aac3b3bf42afe824f73b606f0aa4c.ssl.cf1.rackcdn.com/tenantlogos/12962.png",
-                "brandTagUrl": "http://maps.google.com/mapfiles/ms/icons/green-dot.png",
+                "brandTagUrl": "http://maps.google.com/mapfiles/ms/icons/green.png",
                 "storeName": "Toronto Eaton Centre",
                 "address": {
                     "street": "220 Yonge Street",
@@ -211,14 +211,14 @@ angular.module('starter.services', [])
                 "phone": "4166420638",
                 "longitude": "-79.379605",
                 "latitude": "43.653289",
-                "distance": "1.5"
+                "distance": "1.5 Km"
             },
             {
                 "@store_code": "EDDIEBAUER_CA_02",
                 "retailer_code": "EDDIEBAUER_CA",
                 "retailer_name": "Eddie Bauer",
                 "brand_logo_url": "https://adc3ef35f321fe6e725a-fb8aac3b3bf42afe824f73b606f0aa4c.ssl.cf1.rackcdn.com/tenantlogos/12962.png",
-                "brandTagUrl": "http://maps.google.com/mapfiles/ms/icons/green-dot.png",
+                "brandTagUrl": "http://maps.google.com/mapfiles/ms/icons/green.png",
                 "storeName": "Shops at Don Mills",
                 "address": {
                     "street": "32 Karl Fraser Road",
@@ -230,14 +230,14 @@ angular.module('starter.services', [])
                 "phone": "4166402291",
                 "longitude": "-79.344775",
                 "latitude": "43.733814",
-                "distance": "1.5"
+                "distance": "1.5 Km"
             },
             {
                 "@store_code": "EDDIEBAUER_CA_03",
                 "retailer_code": "EDDIEBAUER_CA",
                 "retailer_name": "Eddie Bauer",
                 "brand_logo_url": "https://adc3ef35f321fe6e725a-fb8aac3b3bf42afe824f73b606f0aa4c.ssl.cf1.rackcdn.com/tenantlogos/12962.png",
-                "brandTagUrl": "http://maps.google.com/mapfiles/ms/icons/green-dot.png",
+                "brandTagUrl": "http://maps.google.com/mapfiles/ms/icons/green.png",
                 "storeName": "Sherway Gardens",
                 "address": {
                     "street": "25 The West Mall",
@@ -249,14 +249,14 @@ angular.module('starter.services', [])
                 "phone": "4166229531",
                 "longitude": "-79.561445",
                 "latitude": "43.610471",
-                "distance": "1.5"
+                "distance": "1.5 Km"
             },
             {
                 "@store_code": "EDDIEBAUER_CA_04",
                 "retailer_code": "EDDIEBAUER_CA",
                 "retailer_name": "Eddie Bauer",
                 "brand_logo_url": "https://adc3ef35f321fe6e725a-fb8aac3b3bf42afe824f73b606f0aa4c.ssl.cf1.rackcdn.com/tenantlogos/12962.png",
-                "brandTagUrl": "http://maps.google.com/mapfiles/ms/icons/green-dot.png",
+                "brandTagUrl": "http://maps.google.com/mapfiles/ms/icons/green.png",
                 "storeName": "Fairview Mall",
                 "address": {
                     "street": "1800 Sheppard Ave. East",
@@ -268,14 +268,14 @@ angular.module('starter.services', [])
                 "phone": "4164909444",
                 "longitude": "-79.345215",
                 "latitude": "43.775492",
-                "distance": "1.5"
+                "distance": "1.5 Km"
             },
             {
                 "@store_code": "EDDIEBAUER_CA_05",
                 "retailer_code": "EDDIEBAUER_CA",
                 "retailer_name": "Eddie Bauer",
                 "brand_logo_url": "https://adc3ef35f321fe6e725a-fb8aac3b3bf42afe824f73b606f0aa4c.ssl.cf1.rackcdn.com/tenantlogos/12962.png",
-                "brandTagUrl": "http://maps.google.com/mapfiles/ms/icons/green-dot.png",
+                "brandTagUrl": "http://maps.google.com/mapfiles/ms/icons/green.png",
                 "storeName": "Square One Centre",
                 "address": {
                     "street": "100 City Centre Dr",
@@ -287,7 +287,7 @@ angular.module('starter.services', [])
                 "phone": "9053660086",
                 "longitude": "-79.641458",
                 "latitude": "43.59024",
-                "distance": "1.5"
+                "distance": "1.5 Km"
             },
             {
                 "@store_code": "HNM_CA_01",
@@ -306,7 +306,7 @@ angular.module('starter.services', [])
                 "phone": "4169203592",
                 "longitude": "-79.3898907",
                 "latitude": "43.6700673",
-                "distance": "1.5"
+                "distance": "1.5 Km"
             },
             {
                 "@store_code": "HNM_CA_02",
@@ -325,7 +325,7 @@ angular.module('starter.services', [])
                 "phone": "4165930064",
                 "longitude": "-79.3841176",
                 "latitude": "43.6554038",
-                "distance": "1.5"
+                "distance": "1.5 Km"
             },
             {
                 "@store_code": "HNM_CA_03",
@@ -344,7 +344,7 @@ angular.module('starter.services', [])
                 "phone": "4165930167",
                 "longitude": "-79.3976218",
                 "latitude": "43.6486395",
-                "distance": "1.5"
+                "distance": "1.5 Km"
             },
             {
                 "@store_code": "HNM_CA_04",
@@ -363,7 +363,7 @@ angular.module('starter.services', [])
                 "phone": "4165319618",
                 "longitude": "-79.4352469",
                 "latitude": "43.6560132",
-                "distance": "1.5"
+                "distance": "1.5 Km"
             },
             {
                 "@store_code": "HNM_CA_05",
@@ -382,7 +382,7 @@ angular.module('starter.services', [])
                 "phone": "4162563997",
                 "longitude": "-79.4294785",
                 "latitude": "43.6732845",
-                "distance": "1.5"
+                "distance": "1.5 Km"
             },
             {
                 "@store_code": "HNM_CA_06",
@@ -401,7 +401,7 @@ angular.module('starter.services', [])
                 "phone": "4166211545",
                 "longitude": "-79.55686709999999",
                 "latitude": "43.6112889",
-                "distance": "1.5"
+                "distance": "1.5 Km"
             },
             {
                 "@store_code": "OLDNAVY_CA_01",
@@ -420,7 +420,7 @@ angular.module('starter.services', [])
                 "phone": "4165930065",
                 "longitude": "-79.3805654",
                 "latitude": "43.6546609",
-                "distance": "1.5"
+                "distance": "1.5 Km"
             },
             {
                 "@store_code": "OLDNAVY_CA_02",
@@ -439,7 +439,7 @@ angular.module('starter.services', [])
                 "phone": "4167879384",
                 "longitude": "-79.44917819999999",
                 "latitude": "43.7251234",
-                "distance": "1.5"
+                "distance": "1.5 Km"
             },
             {
                 "@store_code": "OLDNAVY_CA_03",
@@ -458,7 +458,7 @@ angular.module('starter.services', [])
                 "phone": "4162791143",
                 "longitude": "-79.2576385",
                 "latitude": "43.7761307",
-                "distance": "1.5"
+                "distance": "1.5 Km"
             },
             {
                 "@store_code": "OLDNAVY_CA_04",
@@ -477,7 +477,7 @@ angular.module('starter.services', [])
                 "phone": "4167577806",
                 "longitude": "-79.2929338",
                 "latitude": "43.7243287",
-                "distance": "1.5"
+                "distance": "1.5 Km"
             },
             {
                 "@store_code": "OLDNAVY_CA_05",
@@ -496,7 +496,7 @@ angular.module('starter.services', [])
                 "phone": "4167610021",
                 "longitude": "-79.468469",
                 "latitude": "43.6729625",
-                "distance": "1.5"
+                "distance": "1.5 Km"
             },
             {
                 "@store_code": "OLDNAVY_CA_06",
@@ -515,7 +515,7 @@ angular.module('starter.services', [])
                 "phone": "9052704841",
                 "longitude": "-79.6423516",
                 "latitude": "43.5931214",
-                "distance": "1.5"
+                "distance": "1.5 Km"
             },
             {
                 "@store_code": "OLDNAVY_CA_07",
@@ -534,7 +534,7 @@ angular.module('starter.services', [])
                 "phone": "9058280521",
                 "longitude": "-79.7115283",
                 "latitude": "43.5583681",
-                "distance": "1.5"
+                "distance": "1.5 Km"
             }
         ]
     }

@@ -5,8 +5,11 @@ angular.module('starter.controllers', ['uiGmapgoogle-maps'])
     document.addEventListener("deviceready", function () {
       cordova.plugins.barcodeScanner
         .scan(function(barcodeData) {
-          console.log('barcodeData', barcodeData);
-          $state.go('tab.product-detail', { productSku: "16010237", showDescription: true, showMakeDeal: true, showForm: false});
+          if(barcodeData) {
+            $state.go('tab.product-detail', { productSku: "16010237", showDescription: true, showMakeDeal: true, showForm: false});
+          } else {
+            $state.go('tab.dash');
+          }
           // Success! Barcode data is here
         }, function(error) {
           console.log('error', error);
@@ -29,11 +32,14 @@ angular.module('starter.controllers', ['uiGmapgoogle-maps'])
 })
 
 .controller('StoresCtrl', function($scope, Stores, $timeout, uiGmapGoogleMapApi) {
-  $scope.data = {
-      clientSide : 'list'
-  };
+  $scope.clientSide = 'list';
+  $scope.listSelected ='active';
   $scope.changeView = function(value) {
-    $scope.data.clientSide = value;
+    var selected = value + 'Selected';
+    var unselected = (value === 'list' ? 'map' : 'list') + 'Selected';
+    $scope.clientSide = value;
+    $scope[unselected] = '';
+    $scope[selected] ='active';
   };
 
   $scope.stores = Stores.all();
@@ -62,41 +68,71 @@ angular.module('starter.controllers', ['uiGmapgoogle-maps'])
     $scope.infoVisible = false;
   };
 
-  var count = 0;
-  Stores.all().forEach(function(el) {
-    $scope.markers.push({
-      id: count,
-      name: el.storeName,
-      location: {
-        latitude: el.latitude,
-        longitude: el.longitude
+  var initializeMap = function (position) {
+    $scope.map = {
+      center: {
+        latitude: position.coords.latitude,
+        longitude: position.coords.longitude
       },
-      icon: el.brandTagUrl
-    });
-    count++
-  });
+      zoom: 10
+    };
 
-  $scope.windowOptions = {
-    pixelOffset: {
-      height: -32,
-      width: 0
-    }
+    $scope.windowOptions = {
+      pixelOffset: {
+        height: -32,
+        width: 0
+      }
+    };
+
+    $scope.markers.push({
+      id: 0,
+      location: {
+        latitude: position.coords.latitude,
+        longitude: position.coords.longitude
+      },
+      icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png"
+    });
+
+    var count = 1;
+    Stores.all().forEach(function(el) {
+      $scope.markers.push({
+        id: count,
+        name: el.storeName,
+        location: {
+          latitude: el.latitude,
+          longitude: el.longitude
+        },
+        icon: el.brandTagUrl
+      });
+      count++
+    });
   };
 
   uiGmapGoogleMapApi.then(function(maps) {
+    // var posOptions = {enableHighAccuracy: false};
+    // navigator.geolocation.getCurrentPosition(function(position) {
+    //   console.log("Got location: " + JSON.stringify(position));
+    //   initializeMap(position);
+    // }, function(error) {
+    //   console.log(error);
+    //   initializeMap({ coords: {
+    //     latitude: 43.730309,
+    //     longitude: -79.376378}
+    //   });
+    // }, posOptions);
+    var position =  {
+      coords: {
+        latitude: 43.730309,
+        longitude: -79.376378
+      }
+    };
+    initializeMap(position);
     if( typeof _.contains === 'undefined' ) {
       _.contains = _.includes;
     }
     if( typeof _.object === 'undefined' ) {
       _.object = _.zipObject;
     }
-    $scope.map = {
-      center: {
-        latitude: 43.730309,
-        longitude: -79.376378
-      },
-      zoom: 10
-    };
   });
 })
 .controller('ProductDetailCtrl', function($scope, $stateParams, $state, ScanShopList) {
@@ -130,20 +166,27 @@ angular.module('starter.controllers', ['uiGmapgoogle-maps'])
 .controller('ScanShopListCtrl', function($scope, $state, $stateParams, ScanShopList) {
   $scope.waitingList = ScanShopList.waiting();
   $scope.closedlist = ScanShopList.closed();
-  $scope.data = {
-    listType: 'waiting'
-  };
 
-  $scope.changeView = function (value) {
-    $scope.data.listType = value;
+
+  $scope.listType =  'waiting';
+  $scope.waitingSelected = 'active';
+  $scope.changeView = function(value) {
+    var selected = value + 'Selected';
+    var unselected = (value === 'closed' ? 'waiting' : 'closed') + 'Selected';
+    $scope.listType = value;
+    $scope[unselected] = '';
+    $scope[selected] ='active';
   };
 
   $scope.readBarcode = function () {
     document.addEventListener("deviceready", function () {
       cordova.plugins.barcodeScanner
         .scan(function(barcodeData) {
-          console.log('barcodeData', barcodeData);
-          $state.go('tab.product-detail', { productSku: "16010237", showDescription: true, showMakeDeal: true, showForm: false});
+          if(barcodeData) {
+            $state.go('tab.product-detail', { productSku: "16010237", showDescription: true, showMakeDeal: true, showForm: false});
+          } else {
+            $state.go('tab.dash');
+          }
           // Success! Barcode data is here
         }, function(error) {
           console.log('error', error);

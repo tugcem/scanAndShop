@@ -1,15 +1,14 @@
 <ion-view view-title="">
 	<ion-nav-buttons>
 		<div class="bar bar-header">
-			<button class="button button-icon icon ion-ios-plus-outline active" ng-click="changeView('list')"></button>
 			<div class="title">
-				<button id="toggle-on" class="toggle toggle-left" ng-click="changeView('list')" type="radio" name="toggle">List</button>
-				<button id="toggle-off" class="toggle toggle-right" ng-click="changeView('map')" type="radio" name="toggle" ng-checked="data.clientSide == 'map'">Map</button>
+				<button id="toggle-on" class="toggle" ng-class="listSelected" ng-click="changeView('list')" name="toggle">List</button>
+				<button id="toggle-off" class="toggle" ng-class="mapSelected" ng-click="changeView('map')" name="toggle">Map</button>
 			</div>
 		</div>
 	</ion-nav-buttons>
 	<ion-content>
-		<ion-list ng-if="data.clientSide == 'list'">
+		<ion-list ng-if="clientSide == 'list'">
 			<ion-item class="item-remove-animate item-avatar item-icon-right row smaller" ng-repeat="store in stores" ng-click="select($index)" ng-class="{sel: $index == selected}" type="item-text-wrap" style="padding: %1;">
 				<div class="col-25">
 					<img ng-src="{{store.brand_logo_url}}" style="width: 60px; height: 60px;">
@@ -23,12 +22,12 @@
 				<div class="col-25">
 					<div class="row">
 						<div class="col-40"></div>
-						<p class="col-60">{{store.distance}} Km</p>
+						<p style="float: right;" class="col-60">{{store.distance}} Km</p>
 					</div>
 				</div>
 			</ion-item>
 		</ion-list>
-		<div ng-if="data.clientSide == 'map'">
+		<div ng-if="clientSide == 'map'">
 			<ui-gmap-google-map center='map.center' zoom='map.zoom'>
 				<ui-gmap-markers models="markers" coords="'location'" click="showInfo" icon="'icon'"></ui-gmap-markers>
 				<ui-gmap-window coords="infoBusiness.location" show="infoVisible" closeClick="hideInfo()" options="windowOptions">
