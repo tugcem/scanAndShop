@@ -1,15 +1,12 @@
 <ion-view view-title="">
   <ion-nav-buttons>
     <div class="bar bar-header">
-      <button class="button button-icon icon ion-ios-plus-outline active" ng-click="readBarcode()">
-      </button>
-      <div class="title">
-        <input id="toggle-on" class="toggle toggle-left" name="toggle" type="radio" ng-click="changeView('waiting')" type="radio" ng-checked="data.listType == 'waiting'">
-        <label for="toggle-on" id="toggle-on" class="switch-label">Waiting</label>
-        <input id="toggle-off" class="toggle toggle-right" name="toggle" ng-click="changeView('closed')" type="radio" ng-checked="data.listType == 'closed'">
-        <label for="toggle-off" id="toggle-off" class="switch-label">Closed</label>
+      <button class="button button-icon icon ion-ios-plus-outline active" ng-click="readBarcode()"></button>      
+      <div class="title">		
+		  <button id="toggle-on" class="toggle toggle-left" ng-click="changeView('waiting')" type="radio" name="toggle"  ng-checked="data.listType == 'waiting'">Waiting</button>
+		  <button id="toggle-off" class="toggle toggle-right" ng-click="changeView('closed')" type="radio" name="toggle" ng-checked="data.listType == 'closed'">Closed</button>	
       </div>
-    </div>
+    </div>	  
   </ion-nav-buttons>
   <ion-content>
     <ion-list>
